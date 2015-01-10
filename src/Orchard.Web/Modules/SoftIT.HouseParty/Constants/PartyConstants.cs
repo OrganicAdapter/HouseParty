@@ -21,5 +21,16 @@ namespace SoftIT.HouseParty.Constants
             "Ordered",
             "Self-service"
         };
+
+        public static IEnumerable<string> Categories = new[]
+        {
+            "Christmas",
+            "New year",
+            "Easter",
+            "Birthday",
+            "Nameday",
+            "Thanks giving",
+            "Other"
+        };
     }
 }

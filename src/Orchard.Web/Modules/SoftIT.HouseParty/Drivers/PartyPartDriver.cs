@@ -1,4 +1,5 @@
 ﻿using Orchard.ContentManagement.Drivers;
+using Orchard.Core.Common.Models;
 using SoftIT.ExtendedUsers.Models;
 using SoftIT.HouseParty.Constants;
 using SoftIT.HouseParty.Models;
@@ -26,19 +27,25 @@ namespace SoftIT.HouseParty.Drivers
 
         protected override DriverResult Editor(PartyPart part, dynamic shapeHelper)
         {
-            var user = part.Organizer.ContentItem.Get(typeof(ExtendedUserPart)) as ExtendedUserPart;
+            var commonPart = part.ContentItem.Get(typeof(CommonPart)) as CommonPart;
+            var owner = commonPart.Owner.ContentItem.Get(typeof(ExtendedUserPart)) as ExtendedUserPart;
 
-            if (string.IsNullOrWhiteSpace(part.Country))
-                part.Country = user.Country;
-
-            if (string.IsNullOrWhiteSpace(part.State))
-                part.State = user.State;
-
-            if (string.IsNullOrWhiteSpace(part.City))
-                part.City = user.City;
-
-            if (string.IsNullOrWhiteSpace(part.Address))
-                part.Address = user.Address;
+            if (!string.IsNullOrWhiteSpace(owner.Country))
+            {
+                part.Country = owner.Country;
+            }
+            if (!string.IsNullOrWhiteSpace(owner.State))
+            {
+                part.State = owner.State;
+            }
+            if (!string.IsNullOrWhiteSpace(owner.City))
+            {
+                part.City = owner.City;
+            }
+            if (!string.IsNullOrWhiteSpace(owner.Address))
+            {
+                part.Address = owner.Address;
+            }
 
             return ContentShape("Parts_Party_Edit", () => shapeHelper.EditorTemplate(
                 TemplateName: "Parts/Party",

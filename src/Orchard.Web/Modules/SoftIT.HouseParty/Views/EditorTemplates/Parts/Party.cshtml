@@ -1,45 +1,58 @@
-﻿@model SoftIT.HouseParty.Models.PartyPart
+﻿@using SoftIT.HouseParty.Constants
+
+@model SoftIT.HouseParty.Models.PartyPart
 
 @{
     var publicTypes = SoftIT.HouseParty.Constants.PartyConstants.PublicTypes.Select(type => new SelectListItem { Text = type, Value = type });
     var supplyTypes = SoftIT.HouseParty.Constants.PartyConstants.SupplyTypes.Select(type => new SelectListItem { Text = type, Value = type });
+    var categories = SoftIT.HouseParty.Constants.PartyConstants.Categories.Select(category => new SelectListItem { Text = category, Value = category });
 }
 
 <fieldset>
     <label>@T("Party details")</label>
+    <span class="hint">@T("The price of a party is {0} PP.", ServicePrices.Party)</span>
 
     <ol>
         <li>
-            @Html.LabelFor(model => model.Name, T("Name"))
+            @Html.LabelFor(model => model.Name, T("Name *"))
             @Html.EditorFor(model => model.Name)
         </li>
         <li>
-            @Html.LabelFor(model => model.Date, T("Date"))
+            @Html.LabelFor(model => model.Date, T("Date *"))
             @Html.EditorFor(model => model.Date)
         </li>
         <li>
-            @Html.LabelFor(model => model.Country, T("Country"))
+            @Html.LabelFor(model => model.Country, T("Country *"))
             @Html.EditorFor(model => model.Country)
         </li>
         <li>
-            @Html.LabelFor(model => model.State, T("State"))
+            @Html.LabelFor(model => model.State, T("State *"))
             @Html.EditorFor(model => model.State)
         </li>
         <li>
-            @Html.LabelFor(model => model.City, T("City"))
+            @Html.LabelFor(model => model.City, T("City *"))
             @Html.EditorFor(model => model.City)
         </li>
         <li>
-            @Html.LabelFor(model => model.Address, T("Address"))
+            @Html.LabelFor(model => model.Address, T("Address *"))
             @Html.EditorFor(model => model.Address)
         </li>
         <li>
-            @Html.LabelFor(model => model.Limit, T("Limit of participants"))
+            @Html.LabelFor(model => model.Limit, T("Limit of participants *"))
             @Html.EditorFor(model => model.Limit)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Income, T("Income *"))
+            @Html.EditorFor(model => model.Income)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Currency, T("Currency *"))
+            @Html.EditorFor(model => model.Currency)
         </li>
         <li>
             @Html.CheckBoxFor(model => model.Visibility)
             <text>@T("Public party")</text>
+            <span class="hint">@T("Changing to private costs: 200PP")</span>
         </li>
         <li>
             @Html.LabelFor(model => model.PublicType, T("Type of party"))
@@ -54,8 +67,8 @@
             @Html.DropDownListFor(model => model.DrinkType, supplyTypes)
         </li>
         <li>
-            @Html.LabelFor(model => model.Income, T("Income"))
-            @Html.EditorFor(model => model.Income)
+            @Html.LabelFor(model => model.Category, T("Category"))
+            @Html.DropDownListFor(model => model.Category, categories)
         </li>
     </ol>
 </fieldset>

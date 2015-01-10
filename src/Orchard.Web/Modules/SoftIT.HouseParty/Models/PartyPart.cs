@@ -13,10 +13,6 @@ namespace SoftIT.HouseParty.Models
 {
     public class PartyPart : ContentPart<PartyPartRecord>, ITitleAspect
     {
-        private readonly LazyField<IUser> _organizerField = new LazyField<IUser>();
-        public LazyField<IUser> OrganizerField { get { return _organizerField; } }
-        public IUser Organizer { get { return _organizerField.Value; } }
-
         [Required]
         public string Name
         {
@@ -93,19 +89,7 @@ namespace SoftIT.HouseParty.Models
             get { return Retrieve(x => x.Policy); }
             set { Store(x => x.Policy, value); }
         }
-
-        public int Likes
-        {
-            get { return Retrieve(x => x.Likes); }
-            set { Store(x => x.Likes, value); }
-        }
-
-        public int Dislikes
-        {
-            get { return Retrieve(x => x.Dislikes); }
-            set { Store(x => x.Dislikes, value); }
-        }
-
+        
         [Required]
         public int Limit
         {
@@ -127,6 +111,14 @@ namespace SoftIT.HouseParty.Models
             set { Store(x => x.Category, value); }
         }
 
+        [Required]
+        [DataType(DataType.Currency)]
+        public string Currency
+        {
+            get { return Retrieve(x => x.Currency); }
+            set { Store(x => x.Currency, value); }
+        }
+
         public string Title
         {
             get { return Name; }
@@ -146,10 +138,14 @@ namespace SoftIT.HouseParty.Models
         public virtual string City { get; set; }
         public virtual string Address { get; set; }
         public virtual string Policy { get; set; }
-        public virtual int Likes { get; set; }
-        public virtual int Dislikes { get; set; }
         public virtual int Limit { get; set; }
         public virtual bool Visibility { get; set; }
         public virtual string Category { get; set; }
+        public virtual string Currency { get; set; }
+
+        public PartyPartRecord()
+        {
+            Visibility = true;
+        }
     }
 }

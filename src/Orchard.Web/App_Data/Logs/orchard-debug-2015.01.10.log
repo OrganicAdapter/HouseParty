@@ -1,53 +1,283 @@
-2015-01-10 23:02:40,051 [88] Orchard.FileSystems.AppData.AppDataFolder - Default - Could not delete recipe execution folder E:\GitHub\HouseParty\src\Orchard.Web\App_Data\RecipeQueue\ad1af710e0ea4fff8a31382c90431fad under "App_Data" folder
-2015-01-10 23:03:28,845 [86] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
-NHibernate.Exceptions.GenericADOException: could not insert: [SoftIT.HouseParty.Models.PartyPartRecord#15][SQL: INSERT INTO SoftIT_HouseParty_PartyPartRecord (Name, PublicType, FoodType, DrinkType, Date, BasePrice, Income, Country, State, City, Address, Policy, Likes, Dislikes, Limit, Visibility, Category, Id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)] ---> System.Data.SqlServerCe.SqlCeException: The column name is not valid. [ Node name (if any) = ,Column name = BasePrice ]
-   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
-   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
-   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
-   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
-   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 203
-   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\NonBatchingBatcher.cs:line 40
-   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Boolean[] notNull, Int32 j, SqlCommandInfo sql, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2656
-   --- End of inner exception stack trace ---
-   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Boolean[] notNull, Int32 j, SqlCommandInfo sql, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2668
-   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 3062
-   at NHibernate.Action.EntityInsertAction.Execute() in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Action\EntityInsertAction.cs:line 59
-   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
-   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 126
-   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 230
-   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 187
-   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 119
-   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 162
-   at NHibernate.Event.Default.DefaultSaveEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 27
-   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 148
-   at NHibernate.Event.Default.DefaultSaveEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 21
-   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 53
-   at NHibernate.Impl.SessionImpl.FireSave(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 2673
-   at NHibernate.Impl.SessionImpl.Save(Object obj) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 485
-   at Orchard.Data.Repository`1.Create(T entity) in e:\GitHub\HouseParty\src\Orchard\Data\Repository.cs:line 96
-   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Create(T entity) in e:\GitHub\HouseParty\src\Orchard\Data\Repository.cs:line 36
-   at Orchard.ContentManagement.DefaultContentManager.<>c__DisplayClass85.<AcquireContentTypeRecord>b__84(AcquireContext`1 ctx) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 766
-   at Orchard.Caching.Cache`2.CreateEntry(TKey k, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 57
-   at Orchard.Caching.Cache`2.AddEntry(TKey k, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 27
-   at Orchard.Caching.Cache`2.<>c__DisplayClass2.<Get>b__0(TKey k) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 19
-   at System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate(TKey key, Func`2 addValueFactory, Func`3 updateValueFactory)
-   at Orchard.Caching.Cache`2.Get(TKey key, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 17
-   at Orchard.Caching.DefaultCacheManager.Get[TKey,TResult](TKey key, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\DefaultCacheManager.cs:line 33
-   at Orchard.ContentManagement.DefaultContentManager.AcquireContentTypeRecord(String contentType) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 758
-   at Orchard.ContentManagement.DefaultContentManager.Create(ContentItem contentItem, VersionOptions options) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 522
-   at Orchard.Core.Contents.Controllers.AdminController.CreatePOST(String id, String returnUrl, Action`1 conditionallyPublish) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Contents\Controllers\AdminController.cs:line 251
-   at Orchard.Core.Contents.Controllers.AdminController.CreatePOST(String id, String returnUrl) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Contents\Controllers\AdminController.cs:line 226
-   at lambda_method(Closure , ControllerBase , Object[] )
-   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
-   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
-   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
-2015-01-10 23:03:28,925 [86] NHibernate.AssertionFailure - Default - An AssertionFailure occurred - this may indicate a bug in NHibernate or in your custom types.
-NHibernate.AssertionFailure: null id in Orchard.ContentManagement.Records.ContentTypeRecord entry (don't flush the Session after an exception occurs)
+2015-01-10 23:28:09,300 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:09,354 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,076 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,084 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,095 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,103 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,110 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,118 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,133 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,142 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:10,159 [118] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\PartyPartHandler.cs(24): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'OrganizerField' and no extension method 'OrganizerField' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:34,855 [125] Orchard.FileSystems.AppData.AppDataFolder - Default - Could not delete recipe execution folder E:\GitHub\HouseParty\src\Orchard.Web\App_Data\RecipeQueue\3ceab7d1df0945f39c2014c4945220ba under "App_Data" folder
+2015-01-10 23:28:47,108 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:47,116 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:47,122 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:47,129 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:47,137 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:28:47,150 [125] Orchard.Environment.DefaultBuildManager - Default - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:29:07,643 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:29:07,644 [10] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-10 23:31:06,434 [95] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:06,443 [95] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-10 23:31:10,438 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,455 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,472 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,489 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,500 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,512 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,532 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,541 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-10 23:31:10,550 [86] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs(29): error CS1061: 'SoftIT.HouseParty.Models.PartyPart' does not contain a definition for 'Organizer' and no extension method 'Organizer' accepting a first argument of type 'SoftIT.HouseParty.Models.PartyPart' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53

@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\External\angular.js" />
-    <Content Include="Scripts\usersearch-filter.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -92,17 +91,13 @@
   <ItemGroup>
     <Compile Include="Constants\ContentTypes.cs" />
     <Compile Include="Constants\PartyConstants.cs" />
+    <Compile Include="Constants\ServicePrices.cs" />
     <Compile Include="Drivers\PartyPartDriver.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
-    <Compile Include="Migrations\FriendsMigrations.cs" />
     <Compile Include="Migrations\InvitationMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
-    <Compile Include="Migrations\RatingsMigrations.cs" />
-    <Compile Include="Migrations\WidgetsMigrations.cs" />
-    <Compile Include="Models\FriendsRecord.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\PartyPart.cs" />
-    <Compile Include="Models\RatingsRecord.cs" />
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>

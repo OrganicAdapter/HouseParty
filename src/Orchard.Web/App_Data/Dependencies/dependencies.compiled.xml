@@ -350,15 +350,15 @@
   </Dependency>
   <Dependency>
     <ExtensionId>SoftIT.ExtendedUsers</ExtensionId>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <VirtualPath>~/Modules/SoftIT.ExtendedUsers/SoftIT.ExtendedUsers.csproj</VirtualPath>
-    <Hash>6c5c380ed3189686</Hash>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/SoftIT.ExtendedUsers/bin/SoftIT.ExtendedUsers.dll</VirtualPath>
+    <Hash>49144b83517410c0</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SoftIT.HouseParty</ExtensionId>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
-    <Hash>f9fb8b226b38368c</Hash>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/SoftIT.HouseParty/bin/SoftIT.HouseParty.dll</VirtualPath>
+    <Hash>92735f5189c5d663</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>

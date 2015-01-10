@@ -30,11 +30,10 @@ namespace SoftIT.HouseParty.Migrations
                     .Column("City", DbType.String)
                     .Column("Address", DbType.String)
                     .Column("Policy", DbType.String)
-                    .Column("Likes", DbType.Int32)
-                    .Column("Dislikes", DbType.Int32)
                     .Column("Limit", DbType.Int32)
                     .Column("Visibility", DbType.Boolean)
-                    .Column("Category", DbType.String));
+                    .Column("Category", DbType.String)
+                    .Column("Currency", DbType.String));
 
             ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Party,
                 type => type
@@ -43,7 +42,29 @@ namespace SoftIT.HouseParty.Migrations
                     .WithPart("CommonPart")
                     .WithPart("BodyPart"));
 
-            return 1;
+            return 3;
+        }
+
+        public int UpdateFrom1()
+        {
+            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
+                table => table
+                    .DropColumn("Likes"));
+
+            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
+                table => table
+                    .DropColumn("Dislikes"));
+
+            return 2;
+        }
+
+        public int UpdateFrom2()
+        {
+            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
+                table => table
+                .AddColumn("Currency", DbType.String));
+
+            return 3;
         }
     }
 }
