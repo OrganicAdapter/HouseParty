@@ -1034,6 +1034,12 @@
     <References />
   </Dependency>
   <Dependency>
+    <ModuleName>SoftIT.ExtendedUsers</ModuleName>
+    <VirtualPath>~/Modules/SoftIT.ExtendedUsers/SoftIT.ExtendedUsers.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
     <ModuleName>SoftIT.HouseParty</ModuleName>
     <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
     <LoaderName>DynamicExtensionLoader</LoaderName>

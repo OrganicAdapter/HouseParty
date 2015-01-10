@@ -242,6 +242,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Azure.MediaServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftIT.HouseParty", "Orchard.Web\Modules\SoftIT.HouseParty\SoftIT.HouseParty.csproj", "{B2EF217F-17B3-43AB-B6DD-AEBA8A201B3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftIT.ExtendedUsers", "Orchard.Web\Modules\SoftIT.ExtendedUsers\SoftIT.ExtendedUsers.csproj", "{5378C523-7326-4DBA-9057-ADC924DB0B89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -1010,6 +1012,13 @@ Global
 		{B2EF217F-17B3-43AB-B6DD-AEBA8A201B3D}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{B2EF217F-17B3-43AB-B6DD-AEBA8A201B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2EF217F-17B3-43AB-B6DD-AEBA8A201B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5378C523-7326-4DBA-9057-ADC924DB0B89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1089,5 +1098,6 @@ Global
 		{7528BF74-25C7-4ABE-883A-443B4EEC4776} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{14A96B1A-9DC9-44C8-A675-206329E15263} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{B2EF217F-17B3-43AB-B6DD-AEBA8A201B3D} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{5378C523-7326-4DBA-9057-ADC924DB0B89} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 EndGlobal

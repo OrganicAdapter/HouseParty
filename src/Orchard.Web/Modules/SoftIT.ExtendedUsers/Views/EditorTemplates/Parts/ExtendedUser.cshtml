@@ -1,0 +1,40 @@
+﻿@model SoftIT.ExtendedUsers.Models.ExtendedUserPart
+
+<fieldset>
+    <legend>@T("Personal informations")</legend>
+
+    <ol>
+        <li>
+            @Html.LabelFor(model => model.FirstName, T("First name *"))
+            @Html.EditorFor(model => model.FirstName)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.LastName, T("Last name *"))
+            @Html.EditorFor(model => model.LastName)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Phone, T("Phone"))
+            @Html.EditorFor(model => model.Phone)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Country, T("Country"))
+            @Html.EditorFor(model => model.Country)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.State, T("State"))
+            @Html.EditorFor(model => model.State)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.City, T("City"))
+            @Html.EditorFor(model => model.City)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Address, T("Address"))
+            @Html.EditorFor(model => model.Address)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.DateOfBirth, T("Date of birth"))
+            @Html.EditorFor(model => model.DateOfBirth)
+        </li>
+    </ol>
+</fieldset>

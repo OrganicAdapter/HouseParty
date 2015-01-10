@@ -3,3 +3,8 @@ d:\SoftIT\HouseParty\src\Tools\MSBuild.Orchard.Tasks\bin\Debug\MSBuild.Orchard.T
 d:\SoftIT\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.csprojResolveAssemblyReference.cache
 d:\SoftIT\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.dll
 d:\SoftIT\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.pdb
+E:\GitHub\HouseParty\src\Tools\MSBuild.Orchard.Tasks\bin\Debug\MSBuild.Orchard.Tasks.dll
+E:\GitHub\HouseParty\src\Tools\MSBuild.Orchard.Tasks\bin\Debug\MSBuild.Orchard.Tasks.pdb
+E:\GitHub\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.csprojResolveAssemblyReference.cache
+E:\GitHub\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.dll
+E:\GitHub\HouseParty\src\Tools\MSBuild.Orchard.Tasks\obj\Debug\MSBuild.Orchard.Tasks.pdb

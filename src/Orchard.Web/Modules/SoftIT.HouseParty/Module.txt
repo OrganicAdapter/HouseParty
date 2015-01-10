@@ -4,8 +4,9 @@ Author: SoftIT Hungary
 Website: http://softit.hu
 Version: 1.0
 OrchardVersion: 1.8.1
-Description: Provides parts for HouseParty website.
+Description: Provides parts and functionality for HouseParty website.
 Features:
     SoftIT.HouseParty:
-        Description: Provides parts for HouseParty website.
+        Description: Provides parts and functionality for HouseParty website.
 		Category: HouseParty
+		Dependencies: SoftIT.ExtendedUsers

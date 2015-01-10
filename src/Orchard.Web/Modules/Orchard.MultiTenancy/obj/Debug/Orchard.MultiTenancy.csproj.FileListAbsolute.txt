@@ -4,3 +4,9 @@ d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.Mu
 d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.dll
 d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.pdb
 d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.csprojResolveAssemblyReference.cache
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.dll.config
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.dll
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.pdb
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.csprojResolveAssemblyReference.cache
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.dll
+E:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.pdb

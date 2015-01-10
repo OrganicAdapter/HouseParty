@@ -9,3 +9,14 @@ d:\SoftIT\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Moq.xml
 d:\SoftIT\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.csprojResolveAssemblyReference.cache
 d:\SoftIT\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.dll
 d:\SoftIT\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.pdb
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Orchard.Tests.dll
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Orchard.Tests.pdb
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Moq.dll
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\nunit.framework.dll
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Orchard.exe
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Orchard.pdb
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Moq.pdb
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\bin\Debug\Moq.xml
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.csprojResolveAssemblyReference.cache
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.dll
+E:\GitHub\HouseParty\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.pdb

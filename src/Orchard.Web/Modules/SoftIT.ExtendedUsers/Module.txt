@@ -1,0 +1,11 @@
+﻿Name: SoftIT.ExtendedUsers
+AntiForgery: enabled
+Author: SoftIT Hungary
+Website: http://softit.hu
+Version: 1.0
+OrchardVersion: 1.8.1
+Description: Extends Orchard User with more fields.
+Features:
+    SoftIT.ExtendedUsers:
+		Category: Users
+        Description: Extends Orchard User with more fields.
