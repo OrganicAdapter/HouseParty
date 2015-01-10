@@ -1043,7 +1043,13 @@
     <ModuleName>SoftIT.HouseParty</ModuleName>
     <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
     <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References />
+    <References>
+      <Reference>
+        <Name>SoftIT.ExtendedUsers</Name>
+        <LoaderName>DynamicExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/SoftIT.ExtendedUsers/SoftIT.ExtendedUsers.csproj</VirtualPath>
+      </Reference>
+    </References>
   </Dependency>
   <Dependency>
     <ModuleName>SysCache</ModuleName>

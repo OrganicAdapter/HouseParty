@@ -1,9 +1,0 @@
-﻿@{
-    var partyEditor = Model.PartyEditor;
-}
-
-@using (Html.BeginFormAntiForgeryPost(Url.Action("Create", new { ReturnUrl = Request.QueryString["ReturnUrl"] }), FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.ValidationSummary()
-    @Display(partyEditor)
-}

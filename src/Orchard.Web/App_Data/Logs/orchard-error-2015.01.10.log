@@ -1,83 +1,54 @@
-2015-01-10 21:07:33,360 [10] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
- http://localhost:2014/HouseParty/Admin/Users/Edit/2
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Web.HttpCompileException: e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.ExtendedUsers\Views\EditorTemplates\Parts\ExtendedUser.cshtml(10): error CS1928: 'System.Web.Mvc.HtmlHelper<SoftIT.ExtendedUsers.Models.ExtendedUserPart>' does not contain a definition for 'ValidationMessageFor' and the best extension method overload 'System.Web.Mvc.Html.ValidationExtensions.ValidationMessageFor<TModel,TProperty>(System.Web.Mvc.HtmlHelper<TModel>, System.Linq.Expressions.Expression<System.Func<TModel,TProperty>>, string)' has some invalid arguments
-   at System.Web.Compilation.AssemblyBuilder.Compile()
-   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
-   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
-   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
-   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
-   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
-   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName)
-   at Orchard.Core.Shapes.CoreShapes.RenderInternal(HtmlHelper Html, TextWriter Output, String TemplateName, Object Model, String Prefix) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 755
-   at Orchard.Core.Shapes.CoreShapes.EditorTemplate(HtmlHelper Html, TextWriter Output, String TemplateName, Object Model, String Prefix) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 743
+2015-01-10 23:03:28,845 [86] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/Admin/Contents/Create/Party
+NHibernate.Exceptions.GenericADOException: could not insert: [SoftIT.HouseParty.Models.PartyPartRecord#15][SQL: INSERT INTO SoftIT_HouseParty_PartyPartRecord (Name, PublicType, FoodType, DrinkType, Date, BasePrice, Income, Country, State, City, Address, Policy, Likes, Dislikes, Limit, Visibility, Category, Id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)] ---> System.Data.SqlServerCe.SqlCeException: The column name is not valid. [ Node name (if any) = ,Column name = BasePrice ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 203
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\NonBatchingBatcher.cs:line 40
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Boolean[] notNull, Int32 j, SqlCommandInfo sql, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2656
    --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs:line 64
-   at Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs:line 55
-   at Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs:line 56
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 185
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 94
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 86
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 44
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 29
-   at CallSite.Target(Closure , CallSite , Object , Object )
-   at Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 274
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs:line 64
-   at Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs:line 55
-   at Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs:line 56
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 185
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 94
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 86
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 44
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 29
-   at CallSite.Target(Closure , CallSite , Object , Object )
-   at ASP._Page_Modules_Orchard_Users_Views_Items_Content_User_Edit_cshtml.Execute() in e:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.Users\Views\Items\Content-User.Edit.cshtml:line 3
-   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
-   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
-   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
-   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
-   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
-   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
-   at Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs:line 151
-   at Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs:line 133
-   at Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs:line 56
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 185
-   at Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs:line 94
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 86
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 44
-   at Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) in e:\GitHub\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs:line 29
-   at CallSite.Target(Closure , CallSite , Object , Object )
-   at ASP._Page_Modules_Orchard_Users_Views_admin_Edit_cshtml.Execute() in e:\GitHub\HouseParty\src\Orchard.Web\Modules\Orchard.Users\Views\Admin\Edit.cshtml:line 6
-   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
-   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
-   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
-   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
-   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
-   at Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) in e:\GitHub\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs:line 59
-   at Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) in e:\GitHub\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs:line 90
-   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
-   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Boolean[] notNull, Int32 j, SqlCommandInfo sql, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2668
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object id, Object[] fields, Object obj, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 3062
+   at NHibernate.Action.EntityInsertAction.Execute() in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Action\EntityInsertAction.cs:line 59
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 126
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 230
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 187
+   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 119
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 162
+   at NHibernate.Event.Default.DefaultSaveEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 27
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 148
+   at NHibernate.Event.Default.DefaultSaveEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 21
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 53
+   at NHibernate.Impl.SessionImpl.FireSave(SaveOrUpdateEvent event) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 2673
+   at NHibernate.Impl.SessionImpl.Save(Object obj) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 485
+   at Orchard.Data.Repository`1.Create(T entity) in e:\GitHub\HouseParty\src\Orchard\Data\Repository.cs:line 96
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Create(T entity) in e:\GitHub\HouseParty\src\Orchard\Data\Repository.cs:line 36
+   at Orchard.ContentManagement.DefaultContentManager.<>c__DisplayClass85.<AcquireContentTypeRecord>b__84(AcquireContext`1 ctx) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 766
+   at Orchard.Caching.Cache`2.CreateEntry(TKey k, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 57
+   at Orchard.Caching.Cache`2.AddEntry(TKey k, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 27
+   at Orchard.Caching.Cache`2.<>c__DisplayClass2.<Get>b__0(TKey k) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 19
+   at System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate(TKey key, Func`2 addValueFactory, Func`3 updateValueFactory)
+   at Orchard.Caching.Cache`2.Get(TKey key, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\Cache.cs:line 17
+   at Orchard.Caching.DefaultCacheManager.Get[TKey,TResult](TKey key, Func`2 acquire) in e:\GitHub\HouseParty\src\Orchard\Caching\DefaultCacheManager.cs:line 33
+   at Orchard.ContentManagement.DefaultContentManager.AcquireContentTypeRecord(String contentType) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 758
+   at Orchard.ContentManagement.DefaultContentManager.Create(ContentItem contentItem, VersionOptions options) in e:\GitHub\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs:line 522
+   at Orchard.Core.Contents.Controllers.AdminController.CreatePOST(String id, String returnUrl, Action`1 conditionallyPublish) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Contents\Controllers\AdminController.cs:line 251
+   at Orchard.Core.Contents.Controllers.AdminController.CreatePOST(String id, String returnUrl) in e:\GitHub\HouseParty\src\Orchard.Web\Core\Contents\Controllers\AdminController.cs:line 226
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+2015-01-10 23:03:28,925 [86] NHibernate.AssertionFailure - Default - An AssertionFailure occurred - this may indicate a bug in NHibernate or in your custom types.
+ http://localhost:2014/HouseParty/Admin/Contents/Create/Party
+NHibernate.AssertionFailure: null id in Orchard.ContentManagement.Records.ContentTypeRecord entry (don't flush the Session after an exception occurs)

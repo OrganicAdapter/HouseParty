@@ -1,8 +1,0 @@
-﻿@{
-    var user = (SoftIT.HouseParty.Models.HousePartyUserPart)Model.ContentPart.User;
-}
-
-@if (WorkContext.CurrentUser != null)
-{ 
-    @Html.ItemEditLinkWithReturnUrl("Edit personal information", user)
-}

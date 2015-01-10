@@ -6,7 +6,7 @@
 }
 
 <fieldset>
-    <label>@T("Party")</label>
+    <label>@T("Party details")</label>
 
     <ol>
         <li>
@@ -54,16 +54,8 @@
             @Html.DropDownListFor(model => model.DrinkType, supplyTypes)
         </li>
         <li>
-            @Html.LabelFor(model => model.BasePrice, T("Price"))
-            @Html.EditorFor(model => model.BasePrice)
-        </li>
-        <li>
-            @Html.LabelFor(model => model.Price, T("Price"))
-            @Html.EditorFor(model => model.Price)
-        </li>
-        <li>
-            @Html.LabelFor(model => model.BasePrice, T("Price"))
-            @Html.EditorFor(model => model.BasePrice)
+            @Html.LabelFor(model => model.Income, T("Income"))
+            @Html.EditorFor(model => model.Income)
         </li>
     </ol>
 </fieldset>

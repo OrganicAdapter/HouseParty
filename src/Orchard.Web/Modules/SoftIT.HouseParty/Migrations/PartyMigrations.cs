@@ -23,17 +23,18 @@ namespace SoftIT.HouseParty.Migrations
                     .Column("PublicType", DbType.String)
                     .Column("FoodType", DbType.String)
                     .Column("DrinkType", DbType.String)
-                    .Column("Date", DbType.String)
-                    .Column("BasePrice", DbType.Double)
-                    .Column("Price", DbType.Double)
+                    .Column("Date", DbType.DateTime)
+                    .Column("Income", DbType.Double)
                     .Column("Country", DbType.String)
                     .Column("State", DbType.String)
                     .Column("City", DbType.String)
                     .Column("Address", DbType.String)
                     .Column("Policy", DbType.String)
-                    .Column("Rating", DbType.Double)
+                    .Column("Likes", DbType.Int32)
+                    .Column("Dislikes", DbType.Int32)
                     .Column("Limit", DbType.Int32)
-                    .Column("Visibility", DbType.Boolean));
+                    .Column("Visibility", DbType.Boolean)
+                    .Column("Category", DbType.String));
 
             ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Party,
                 type => type

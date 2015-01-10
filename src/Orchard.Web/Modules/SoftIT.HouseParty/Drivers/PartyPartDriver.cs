@@ -1,4 +1,5 @@
 ﻿using Orchard.ContentManagement.Drivers;
+using SoftIT.ExtendedUsers.Models;
 using SoftIT.HouseParty.Constants;
 using SoftIT.HouseParty.Models;
 using System;
@@ -25,7 +26,7 @@ namespace SoftIT.HouseParty.Drivers
 
         protected override DriverResult Editor(PartyPart part, dynamic shapeHelper)
         {
-            var user = part.Organizer.ContentItem.Get(typeof(HousePartyUserPart)) as HousePartyUserPart;
+            var user = part.Organizer.ContentItem.Get(typeof(ExtendedUserPart)) as ExtendedUserPart;
 
             if (string.IsNullOrWhiteSpace(part.Country))
                 part.Country = user.Country;

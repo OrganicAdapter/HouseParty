@@ -17,6 +17,7 @@ namespace SoftIT.HouseParty.Constants
         public static IEnumerable<string> SupplyTypes = new[]
         {
             "Fix",
+            "Checklist",
             "Ordered",
             "Self-service"
         };

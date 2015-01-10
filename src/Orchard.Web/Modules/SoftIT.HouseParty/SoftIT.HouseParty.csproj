@@ -84,39 +84,26 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SoftIT.ExtendedUsers\SoftIT.ExtendedUsers.csproj">
+      <Project>{5378c523-7326-4dba-9057-adc924db0b89}</Project>
+      <Name>SoftIT.ExtendedUsers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\ContentTypes.cs" />
     <Compile Include="Constants\PartyConstants.cs" />
-    <Compile Include="Controllers\HousePartyUserController.cs" />
-    <Compile Include="Controllers\PartyController.cs" />
-    <Compile Include="Drivers\EditHousePartyUserPartDriver.cs" />
-    <Compile Include="Drivers\CreatePartyPartDriver.cs" />
-    <Compile Include="Drivers\UserSearchPartDriver.cs" />
-    <Compile Include="Drivers\HousePartyUserPartDriver.cs" />
     <Compile Include="Drivers\PartyPartDriver.cs" />
-    <Compile Include="Handlers\EditHousePartyUserPartHandler.cs" />
-    <Compile Include="Handlers\UserSearchPartHandler.cs" />
-    <Compile Include="Handlers\HousePartyUserPartHandler.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
     <Compile Include="Migrations\FriendsMigrations.cs" />
-    <Compile Include="Migrations\HousePartyUserMigrations.cs" />
     <Compile Include="Migrations\InvitationMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
     <Compile Include="Migrations\RatingsMigrations.cs" />
     <Compile Include="Migrations\WidgetsMigrations.cs" />
-    <Compile Include="Models\CreatePartyPart.cs" />
-    <Compile Include="Models\EditHousePartyUserPart.cs" />
     <Compile Include="Models\FriendsRecord.cs" />
-    <Compile Include="Models\HousePartyUserPart.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\PartyPart.cs" />
     <Compile Include="Models\RatingsRecord.cs" />
-    <Compile Include="Models\UserSearchPart.cs" />
     <Compile Include="ResourceManifest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\HousePartyUser\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\EditorTemplates\Parts\Party.cshtml" />
@@ -125,25 +112,10 @@
     <Content Include="Placement.info" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\EditorTemplates\Parts\HousePartyUser.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Parts\Party.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Parts\UserSearch.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Parts\HousePartyUser.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Parts\CreateParty.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Party\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Parts\EditHousePartyUser.cshtml" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -352,13 +352,13 @@
     <ExtensionId>SoftIT.ExtendedUsers</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/SoftIT.ExtendedUsers/SoftIT.ExtendedUsers.csproj</VirtualPath>
-    <Hash>6c5c380ea37ced97</Hash>
+    <Hash>6c5c380ed3189686</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SoftIT.HouseParty</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
-    <Hash>40024a92b7894ea5</Hash>
+    <Hash>f9fb8b226b38368c</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>
