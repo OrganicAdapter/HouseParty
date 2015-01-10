@@ -1,0 +1,6 @@
+d:\SoftIT\HouseParty\src\Tools\Orchard\bin\Debug\Orchard.exe.config
+d:\SoftIT\HouseParty\src\Tools\Orchard\bin\Debug\Orchard.exe
+d:\SoftIT\HouseParty\src\Tools\Orchard\bin\Debug\Orchard.pdb
+d:\SoftIT\HouseParty\src\Tools\Orchard\obj\Debug\Orchard.csprojResolveAssemblyReference.cache
+d:\SoftIT\HouseParty\src\Tools\Orchard\obj\Debug\Orchard.exe
+d:\SoftIT\HouseParty\src\Tools\Orchard\obj\Debug\Orchard.pdb

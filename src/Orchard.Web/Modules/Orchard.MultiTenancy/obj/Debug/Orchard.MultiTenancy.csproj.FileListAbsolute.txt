@@ -1,0 +1,6 @@
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.dll.config
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.dll
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\bin\Orchard.MultiTenancy.pdb
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.dll
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.pdb
+d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.MultiTenancy\obj\Debug\Orchard.MultiTenancy.csprojResolveAssemblyReference.cache

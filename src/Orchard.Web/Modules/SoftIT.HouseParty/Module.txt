@@ -1,0 +1,11 @@
+﻿Name: SoftIT.HouseParty
+AntiForgery: enabled
+Author: SoftIT Hungary
+Website: http://softit.hu
+Version: 1.0
+OrchardVersion: 1.8.1
+Description: Provides parts for HouseParty website.
+Features:
+    SoftIT.HouseParty:
+        Description: Provides parts for HouseParty website.
+		Category: HouseParty

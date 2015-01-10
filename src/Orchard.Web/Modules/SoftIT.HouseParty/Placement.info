@@ -1,0 +1,11 @@
+﻿<Placement>
+	<Place Parts_Party_Edit="Content: 1"
+         Parts_Party="Content: 1"/>
+  <Place Parts_HousePartyUser="Content: 1"
+         Parts_HousePartyUser_Edit="Content: 1" />
+  <Place Parts_ActivityStream_Edit="Content: 1" />
+  <Place Parts_ActivityStreamComment="Content: 1" />
+  <Place Parts_UserSearch="Content: 1" />
+  <Place Parts_CreateParty="Content: 1" />
+  <Place Parts_EditHousePartyUser="Content: 1" />
+</Placement>

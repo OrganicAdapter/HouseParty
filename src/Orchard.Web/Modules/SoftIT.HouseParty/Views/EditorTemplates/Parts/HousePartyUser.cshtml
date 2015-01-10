@@ -1,0 +1,35 @@
+﻿@model SoftIT.HouseParty.Models.HousePartyUserPart
+
+<fieldset>
+    <legend>@T("Personal information")</legend>
+
+    <ol>
+        <li>
+            @Html.LabelFor(model => model.FirstName, T("First name"))
+            @Html.EditorFor(model => model.FirstName)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.LastName, T("Last name"))
+            @Html.EditorFor(model => model.LastName)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Country, T("Country"))
+            @Html.EditorFor(model => model.Country)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.State, T("State"))
+            @Html.EditorFor(model => model.State)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.City, T("City"))
+            @Html.EditorFor(model => model.City)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Address, T("Address"))
+            @Html.EditorFor(model => model.Address)
+        </li>
+        <li>
+            @T("Szám: {0}", Model.Parties.Count())
+        </li>
+    </ol>
+</fieldset>

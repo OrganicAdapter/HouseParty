@@ -1,0 +1,699 @@
+2015-01-04 01:12:41,539 [44] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLink(HtmlHelper html, String linkText, IContent content, Object additionalRouteValues) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 85
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLinkWithReturnUrl(HtmlHelper html, String linkText, IContent content) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 77
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_CreateParty_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\CreateParty.cshtml, sor: 8
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-04 01:38:35,674 [7] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/Party/Create
+System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.ContentManagement.DefaultContentDisplay.BuildEditor(IContent content, String groupId) hely: d:\SoftIT\HouseParty\src\Orchard\ContentManagement\DefaultContentDisplay.cs, sor: 65
+   a következõ helyen: Orchard.ContentManagement.DefaultContentManager.BuildEditor(IContent content, String groupId) hely: d:\SoftIT\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs, sor: 636
+   a következõ helyen: SoftIT.HouseParty.Controllers.PartyController.Create()
+   a következõ helyen: lambda_method(Closure , ControllerBase , Object[] )
+   a következõ helyen: System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   a következõ helyen: System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+2015-01-04 01:40:50,596 [7] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/Party/Create
+System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.ContentManagement.DefaultContentDisplay.BuildEditor(IContent content, String groupId) hely: d:\SoftIT\HouseParty\src\Orchard\ContentManagement\DefaultContentDisplay.cs, sor: 65
+   a következõ helyen: Orchard.ContentManagement.DefaultContentManager.BuildEditor(IContent content, String groupId) hely: d:\SoftIT\HouseParty\src\Orchard\ContentManagement\DefaultContentManager.cs, sor: 636
+   a következõ helyen: SoftIT.HouseParty.Controllers.PartyController.Create()
+   a következõ helyen: lambda_method(Closure , ControllerBase , Object[] )
+   a következõ helyen: System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   a következõ helyen: System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+2015-01-04 01:44:35,856 [10] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/Party/Create
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: A(z) „Orchard.UI.Zones.ZoneHolding” – „System.Web.Mvc.ActionResult” implicit típuskonverzió nem lehetséges.
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   a következõ helyen: SoftIT.HouseParty.Controllers.PartyController.Create() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs, sor: 29
+   a következõ helyen: lambda_method(Closure , ControllerBase , Object[] )
+   a következõ helyen: System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   a következõ helyen: System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+   a következõ helyen: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass48.<InvokeActionMethodFilterAsynchronouslyRecursive>b__41()
+2015-01-04 18:04:54,293 [35] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: SoftIT.HouseParty.Handlers.EditHousePartyUserPartHandler.<>c__DisplayClass3.<.ctor>b__1() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\EditHousePartyUserPartHandler.cs, sor: 21
+   a következõ helyen: Orchard.Core.Common.Utilities.LazyField`1.GetValue() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Common\Utilities\LazyField.cs, sor: 24
+   a következõ helyen: Orchard.Core.Common.Utilities.LazyField`1.get_Value() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Common\Utilities\LazyField.cs, sor: 10
+   a következõ helyen: SoftIT.HouseParty.Models.EditHousePartyUserPart.get_User() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Models\EditHousePartyUserPart.cs, sor: 15
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object )
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_EditHousePartyUser_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\EditHousePartyUser.cshtml, sor: 2
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-04 18:05:59,440 [29] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLink(HtmlHelper html, String linkText, IContent content, Object additionalRouteValues) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 85
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLinkWithReturnUrl(HtmlHelper html, String linkText, IContent content) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 77
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_EditHousePartyUser_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\EditHousePartyUser.cshtml, sor: 5
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-04 18:07:16,202 [29] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/HousePartyUser?userId=2
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLink(HtmlHelper html, String linkText, IContent content, Object additionalRouteValues) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 85
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLinkWithReturnUrl(HtmlHelper html, String linkText, IContent content) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 77
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_EditHousePartyUser_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\EditHousePartyUser.cshtml, sor: 7
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-04 18:07:48,906 [26] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/HousePartyUser?userId=2
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLink(HtmlHelper html, String linkText, IContent content, Object additionalRouteValues) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 85
+   a következõ helyen: Orchard.Mvc.Html.ContentItemExtensions.ItemEditLinkWithReturnUrl(HtmlHelper html, String linkText, IContent content) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\Html\ContentItemExtensions.cs, sor: 77
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_EditHousePartyUser_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\EditHousePartyUser.cshtml, sor: 7
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-04 18:11:29,401 [23] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:2014/HouseParty/Users/Account/AccessDenied?ReturnUrl=%2FHouseParty%2FSoftIT.HouseParty%2FHousePartyUser%3FuserId%3D2
+System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.Reflection.TargetInvocationException: A meghívott objektum kivételt váltott ki. ---> System.NullReferenceException: Az objektumhivatkozás nincs beállítva semmilyen objektumpéldányra.
+   a következõ helyen: SoftIT.HouseParty.Handlers.EditHousePartyUserPartHandler.<>c__DisplayClass3.<.ctor>b__1() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Handlers\EditHousePartyUserPartHandler.cs, sor: 21
+   a következõ helyen: Orchard.Core.Common.Utilities.LazyField`1.GetValue() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Common\Utilities\LazyField.cs, sor: 24
+   a következõ helyen: Orchard.Core.Common.Utilities.LazyField`1.get_Value() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Common\Utilities\LazyField.cs, sor: 10
+   a következõ helyen: SoftIT.HouseParty.Models.EditHousePartyUserPart.get_User() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Models\EditHousePartyUserPart.cs, sor: 15
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object )
+   a következõ helyen: ASP._Page_Modules_SoftIT_HouseParty_Views_Parts_EditHousePartyUser_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Views\Parts\EditHousePartyUser.cshtml, sor: 2
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.ContentZone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 274
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Modules_Orchard_Widgets_Views_Widget_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Modules\Orchard.Widgets\Views\Widget.cshtml, sor: 1
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Core.Shapes.CoreShapes.Zone(Object Display, Object Shape, TextWriter Output) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Core\Shapes\CoreShapes.cs, sor: 267
+   --- Vége a belsõ kivételek veremkivonatának ---
+   a következõ helyen: System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   a következõ helyen: System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   a következõ helyen: System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.PerformInvoke(DisplayContext displayContext, MethodInfo methodInfo, Object serviceInstance) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 64
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAttributeStrategy.ShapeAttributeBindingStrategy.<>c__DisplayClass4.<CreateDelegate>b__3(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAttributeStrategy\ShapeAttributeBindingStrategy.cs, sor: 55
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.<Execute>b__9b(Object x) hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 20
+   a következõ helyen: CallSite.Target(Closure , CallSite , Func`2 , Object )
+   a következõ helyen: ASP._Page_Themes_TheThemeMachine_Views_Layout_cshtml.Execute() hely: d:\SoftIT\HouseParty\src\Orchard.Web\Themes\TheThemeMachine\Views\Layout.cshtml, sor: 60
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   a következõ helyen: System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   a következõ helyen: System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   a következõ helyen: System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   a következõ helyen: System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   a következõ helyen: System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   a következõ helyen: System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.Render(ShapeDescriptor shapeDescriptor, DisplayContext displayContext, HarvestShapeInfo harvestShapeInfo, HarvestShapeHit harvestShapeHit) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 151
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeTemplateStrategy.ShapeTemplateBindingStrategy.<>c__DisplayClass26.<>c__DisplayClass28.<Discover>b__15(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeTemplateStrategy\ShapeTemplateBindingStrategy.cs, sor: 133
+   a következõ helyen: Orchard.DisplayManagement.Descriptors.ShapeAlterationBuilder.<>c__DisplayClass3.<>c__DisplayClass5.<BoundAs>b__2(DisplayContext displayContext) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Descriptors\ShapeAlterationBuilder.cs, sor: 56
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Process(ShapeBinding shapeBinding, IShape shape, DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 185
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DefaultDisplayManager.Execute(DisplayContext context) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DefaultDisplayManager.cs, sor: 94
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.ShapeExecute(Object shape) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 86
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.Invoke(String name, INamedEnumerable`1 parameters) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 44
+   a következõ helyen: Orchard.DisplayManagement.Implementation.DisplayHelper.TryInvoke(InvokeBinder binder, Object[] args, Object& result) hely: d:\SoftIT\HouseParty\src\Orchard\DisplayManagement\Implementation\DisplayHelper.cs, sor: 29
+   a következõ helyen: CallSite.Target(Closure , CallSite , Object , Object )
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.<>c__DisplayClass7.<FindView>b__5(ViewContext viewContext, TextWriter writer, IViewDataContainer viewDataContainer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 63
+   a következõ helyen: Orchard.Mvc.ViewEngines.ThemeAwareness.LayoutAwareViewEngine.LayoutView.Render(ViewContext viewContext, TextWriter writer) hely: d:\SoftIT\HouseParty\src\Orchard\Mvc\ViewEngines\ThemeAwareness\LayoutAwareViewEngine.cs, sor: 90
+   a következõ helyen: System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   a következõ helyen: System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)

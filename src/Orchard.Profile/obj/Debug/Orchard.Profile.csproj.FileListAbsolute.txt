@@ -1,0 +1,7 @@
+d:\SoftIT\HouseParty\src\Orchard.Profile\bin\Debug\Orchard.Profile.dll
+d:\SoftIT\HouseParty\src\Orchard.Profile\bin\Debug\Orchard.Profile.pdb
+d:\SoftIT\HouseParty\src\Orchard.Profile\bin\Debug\nunit.framework.dll
+d:\SoftIT\HouseParty\src\Orchard.Profile\bin\Debug\TechTalk.SpecFlow.dll
+d:\SoftIT\HouseParty\src\Orchard.Profile\obj\Debug\Orchard.Profile.csprojResolveAssemblyReference.cache
+d:\SoftIT\HouseParty\src\Orchard.Profile\obj\Debug\Orchard.Profile.dll
+d:\SoftIT\HouseParty\src\Orchard.Profile\obj\Debug\Orchard.Profile.pdb

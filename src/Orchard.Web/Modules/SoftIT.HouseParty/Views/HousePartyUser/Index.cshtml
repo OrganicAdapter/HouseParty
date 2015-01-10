@@ -1,0 +1,29 @@
+﻿@using Orchard.Security
+@using SoftIT.HouseParty.Models
+
+@{
+    var userDisplay = Model.UserDisplay;
+    var currentUser = (HousePartyUserPart)Model.CurrentUser;
+    var canRate = (bool)Model.CanRate;
+}
+
+<div>@Display(userDisplay)</div>
+
+@if (WorkContext.CurrentUser != null && WorkContext.CurrentUser.Id != int.Parse(Request.Params["userId"]))
+{
+    if (currentUser.Friends.Select(x => x.Id).Contains(int.Parse(Request.Params["userId"])) && canRate)
+    {    
+        <div>
+            @Html.ActionLink("Like", "Like", new { userId = Request.Params["userId"] })
+            @Html.ActionLink("Dislike", "Dislike", new { userId = Request.Params["userId"] })
+        </div>
+    }
+    
+    if (!currentUser.Friends.Select(x => x.Id).Contains(int.Parse(Request.Params["userId"])) &&
+        !currentUser.FriendRequests.Select(x => x.Id).Contains(int.Parse(Request.Params["userId"])))
+    { 
+        <div>@Html.ActionLink("Friend", "SetFriend", new { userId = Request.Params["userId"] })</div>
+    }
+}
+
+
