@@ -85,3 +85,4 @@ E:\GitHub\HouseParty\src\Orchard\bin\Debug\System.Net.Http.Formatting.xml
 E:\GitHub\HouseParty\src\Orchard\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\GitHub\HouseParty\src\Orchard\obj\Debug\Orchard.Framework.dll
 E:\GitHub\HouseParty\src\Orchard\obj\Debug\Orchard.Framework.pdb
+E:\GitHub\HouseParty\src\Orchard\obj\Debug\Orchard.Framework.csprojResolveAssemblyReference.cache

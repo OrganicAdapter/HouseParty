@@ -1,5 +1,6 @@
 ﻿using Orchard;
 using Orchard.ContentManagement;
+using Orchard.Core.Common.Models;
 using Orchard.Data;
 using Orchard.Localization;
 using Orchard.Mvc;
@@ -39,6 +40,9 @@ namespace SoftIT.HouseParty.Controllers
         {
             var item = GetItem(id);
             if (item == null) return new HttpNotFoundResult();
+
+            if (!item.As<CommonPart>().Owner.Id.Equals(_orchardServices.WorkContext.CurrentUser.Id))
+                return new HttpUnauthorizedResult();
 
             return PartyDashboardShapeResult(item);
         }

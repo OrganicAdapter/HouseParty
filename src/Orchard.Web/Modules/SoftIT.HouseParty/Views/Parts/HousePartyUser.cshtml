@@ -1,0 +1,9 @@
+﻿@{
+    var likes = (int)Model.ContentPart.Likes;
+    var dislikes = (int)Model.ContentPart.Dislikes;
+    var money = (int)Model.ContentPart.Money;
+}
+
+<div>@T("Likes: {0}", likes)</div>
+<div>@T("Dislikes: {0}", dislikes)</div>
+<div>@T("Money: {0}", money)</div>

@@ -50,53 +50,7 @@ namespace SoftIT.HouseParty.Migrations
                     .WithSetting("Stereotype", "Widget")
                 );
 
-            return 5;
-        }
-
-        public int UpdateFrom1()
-        {
-            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
-                table => table
-                    .DropColumn("Likes"));
-
-            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
-                table => table
-                    .DropColumn("Dislikes"));
-
-            return 2;
-        }
-
-        public int UpdateFrom2()
-        {
-            SchemaBuilder.AlterTable(typeof(PartyPartRecord).Name,
-                table => table
-                .AddColumn("Currency", DbType.String));
-
-            return 3;
-        }
-
-        public int UpdateFrom3()
-        {
-            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
-                type => type
-                    .WithPart(typeof(PartyPart).Name)
-                    .WithPart("CommonPart")
-                    .WithPart("WidgetPart")
-                    .WithSetting("Stereotype", "Widget")
-                );
-
-            return 4;
-        }
-
-        public int UpdateFrom4()
-        {
-            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
-                type => type
-                    .RemovePart(typeof(PartyPart).Name)
-                    .WithPart(typeof(NewPartyWidgetPart).Name)
-                );
-
-            return 5;
+            return 1;
         }
     }
 }

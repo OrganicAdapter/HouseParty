@@ -1,8 +1,11 @@
-﻿using Orchard.ContentManagement.Drivers;
+﻿using Orchard;
+using Orchard.ContentManagement.Drivers;
 using Orchard.Core.Common.Models;
+using Orchard.Localization;
 using SoftIT.ExtendedUsers.Models;
 using SoftIT.HouseParty.Constants;
 using SoftIT.HouseParty.Models;
+using SoftIT.HouseParty.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +15,25 @@ namespace SoftIT.HouseParty.Drivers
 {
     public class PartyPartDriver : ContentPartDriver<PartyPart>
     {
+        private readonly IHousePartyUserMoneyService _housePartyUserMoneyService;
+        private readonly IOrchardServices _orchardServices;
+
         protected override string Prefix
         {
             get
             {
                 return "SoftIT.HouseParty.Models.PartyPart";
             }
+        }
+
+        public Localizer T { get; set; }
+
+        public PartyPartDriver(IHousePartyUserMoneyService housePartyUserMoneyService, IOrchardServices orchardServices)
+        {
+            _housePartyUserMoneyService = housePartyUserMoneyService;
+            _orchardServices = orchardServices;
+
+            T = NullLocalizer.Instance;
         }
 
         protected override DriverResult Display(PartyPart part, string displayType, dynamic shapeHelper)
@@ -56,6 +72,18 @@ namespace SoftIT.HouseParty.Drivers
         protected override DriverResult Editor(PartyPart part, Orchard.ContentManagement.IUpdateModel updater, dynamic shapeHelper)
         {
             updater.TryUpdateModel(part, Prefix, null, null);
+
+            if (part.Income < 0)
+                updater.AddModelError("InvalidIncomeValue", T("Income must be larger than or equal to 0."));
+
+            var housePartyUser = _orchardServices.WorkContext.CurrentUser.ContentItem.Get(typeof(HousePartyUserPart)) as HousePartyUserPart;
+
+            var summedMoney = _housePartyUserMoneyService.GetAllPrice(part);
+
+            if (summedMoney > housePartyUser.Money)
+                updater.AddModelError("NotEnoughMoney", T("You don't have enough PP to organize this party."));
+            else
+                housePartyUser.Money -= summedMoney;
 
             return Editor(part, shapeHelper);
         }
