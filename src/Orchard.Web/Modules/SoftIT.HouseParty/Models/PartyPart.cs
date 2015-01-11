@@ -146,6 +146,9 @@ namespace SoftIT.HouseParty.Models
         public PartyPartRecord()
         {
             Visibility = true;
+            PublicType = "Public";
+            FoodType = "Fix";
+            DrinkType = "Fix";
         }
     }
 }

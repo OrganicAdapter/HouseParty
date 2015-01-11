@@ -1041,8 +1041,8 @@
   </Dependency>
   <Dependency>
     <ModuleName>SoftIT.HouseParty</ModuleName>
-    <VirtualPath>~/Modules/SoftIT.HouseParty/bin/SoftIT.HouseParty.dll</VirtualPath>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
     <References>
       <Reference>
         <Name>SoftIT.ExtendedUsers</Name>

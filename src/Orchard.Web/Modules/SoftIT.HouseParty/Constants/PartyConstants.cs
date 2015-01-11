@@ -11,7 +11,7 @@ namespace SoftIT.HouseParty.Constants
         {
             "Public",
             "Restricted",
-            "Private"
+            "Exclusive"
         };
 
         public static IEnumerable<string> SupplyTypes = new[]

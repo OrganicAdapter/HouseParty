@@ -3,12 +3,16 @@
 @model SoftIT.HouseParty.Models.PartyPart
 
 @{
+    Script.Require("PartyController").AtFoot();
+    
     var publicTypes = SoftIT.HouseParty.Constants.PartyConstants.PublicTypes.Select(type => new SelectListItem { Text = type, Value = type });
     var supplyTypes = SoftIT.HouseParty.Constants.PartyConstants.SupplyTypes.Select(type => new SelectListItem { Text = type, Value = type });
     var categories = SoftIT.HouseParty.Constants.PartyConstants.Categories.Select(category => new SelectListItem { Text = category, Value = category });
 }
 
-<fieldset>
+<fieldset data-ng-app="PartyApp"
+          data-ng-controller="PartyController"
+          data-ng-init="init(@Model.Income, '@Model.PublicType', '@Model.FoodType', '@Model.DrinkType', '@Model.Visibility')">
     <label>@T("Party details")</label>
     <span class="hint">@T("The price of a party is {0} PP.", ServicePrices.Party)</span>
 
@@ -43,32 +47,44 @@
         </li>
         <li>
             @Html.LabelFor(model => model.Income, T("Income *"))
-            @Html.EditorFor(model => model.Income)
+            @Html.TextBoxFor(model => model.Income, new { data_ng_model = "incomeValue" })
+            <span class="hint" data-ng-show="incomeValue > 0">@T("Setting income other than 0 costs you {0} PP.", ServicePrices.IncomePrice)</span>
         </li>
         <li>
             @Html.LabelFor(model => model.Currency, T("Currency *"))
             @Html.EditorFor(model => model.Currency)
         </li>
         <li>
-            @Html.CheckBoxFor(model => model.Visibility)
+            @Html.CheckBoxFor(model => model.Visibility, new { data_ng_model = "publicPartyValue" })
             <text>@T("Public party")</text>
-            <span class="hint">@T("Changing to private costs: 200PP")</span>
+            <span class="hint" data-ng-hide="publicPartyValue">@T("Changing to private costs: {0} PP.", ServicePrices.PrivatePartyPrice)</span>
         </li>
         <li>
             @Html.LabelFor(model => model.PublicType, T("Type of party"))
-            @Html.DropDownListFor(model => model.PublicType, publicTypes)
+            @Html.DropDownListFor(model => model.PublicType, publicTypes, new { data_ng_model = "partyTypeValue" })
+            <span class="hint" data-ng-show="partyTypeValue == 'Restricted'">@T("Changing to restricted costs you {0} PP.", ServicePrices.RestrictedPartyPrice)</span>
+            <span class="hint" data-ng-show="partyTypeValue == 'Exclusive'">@T("Changing to exclusive costs you {0} PP.", ServicePrices.ExclusivePartyPrice)</span>
         </li>
         <li>
             @Html.LabelFor(model => model.FoodType, T("Type of food supply"))
-            @Html.DropDownListFor(model => model.FoodType, supplyTypes)
+            @Html.DropDownListFor(model => model.FoodType, supplyTypes, new { data_ng_model = "foodTypeValue" })
+            <span class="hint" data-ng-show="foodTypeValue == 'Checklist'">@T("Changing to checklist costs you {0} PP.", ServicePrices.ChecklistPrice)</span>
+            <span class="hint" data-ng-show="foodTypeValue == 'Ordered'">@T("Changing to ordered costs you {0} PP.", ServicePrices.OrderedPrice)</span>
+            <span class="hint" data-ng-show="foodTypeValue == 'Self-service'">@T("Changing to self-service costs you {0} PP.", ServicePrices.SelfServicePrice)</span>
         </li>
         <li>
             @Html.LabelFor(model => model.DrinkType, T("Type of drink supply"))
-            @Html.DropDownListFor(model => model.DrinkType, supplyTypes)
+            @Html.DropDownListFor(model => model.DrinkType, supplyTypes, new { data_ng_model = "drinkTypeValue" })
+            <span class="hint" data-ng-show="drinkTypeValue == 'Checklist'">@T("Changing to checklist costs you {0} PP.", ServicePrices.ChecklistPrice)</span>
+            <span class="hint" data-ng-show="drinkTypeValue == 'Ordered'">@T("Changing to ordered costs you {0} PP.", ServicePrices.OrderedPrice)</span>
+            <span class="hint" data-ng-show="drinkTypeValue == 'Self-service'">@T("Changing to self-service costs you {0} PP.", ServicePrices.SelfServicePrice)</span>
         </li>
         <li>
             @Html.LabelFor(model => model.Category, T("Category"))
             @Html.DropDownListFor(model => model.Category, categories)
+        </li>
+        <li>
+            @T("Total orice of this party is ")<span data-ng-bind="SummedPrice()" />
         </li>
     </ol>
 </fieldset>
