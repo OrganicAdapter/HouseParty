@@ -62,13 +62,24 @@ namespace SoftIT.HouseParty.Controllers
             _contentManager.Publish(item);
             _notifier.Information(T("The party was successfully saved."));
 
-            return RedirectToAction("PartyDashboard");
+            return RedirectToAction("PartySummary", new { id = item.Id });
+        }
+
+        public ActionResult PartySummary(int id)
+        {
+            var item = _contentManager.Get(id);
+            if (item == null) return new HttpNotFoundResult();
+
+            var itemDisplayShape = _contentManager.BuildDisplay(item);
+            var displayShape = _orchardServices.New.SoftIT_HouseParty_PartySummary(DisplayShape: itemDisplayShape);
+
+            return new ShapeResult(this, displayShape);
         }
 
         private ShapeResult PartyDashboardShapeResult(ContentItem item)
         {
             var itemEditorShape = _contentManager.BuildEditor(item);
-            var editorShape = _orchardServices.New.SoftIT_HouseParty_PartyDashboard(EditorShape: itemEditorShape);
+            var editorShape = _orchardServices.New.SoftIT_HouseParty_PartyDashboard(EditorShape: itemEditorShape, Id: item.Id);
 
             return new ShapeResult(this, editorShape);
         }

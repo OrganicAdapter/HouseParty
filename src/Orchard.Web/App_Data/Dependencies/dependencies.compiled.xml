@@ -358,7 +358,7 @@
     <ExtensionId>SoftIT.HouseParty</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
-    <Hash>b1370f04d54773ef</Hash>
+    <Hash>b1370f1175d109ab</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>

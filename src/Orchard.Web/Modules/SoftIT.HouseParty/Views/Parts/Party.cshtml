@@ -1,1 +1,36 @@
-﻿
+﻿@{
+    var name = (string)Model.ContentPart.Name;
+    var publicType = (string)Model.ContentPart.PublicType;
+    var foodType = (string)Model.ContentPart.FoodType;
+    var drinkType = (string)Model.ContentPart.DrinkType;
+    var date = (DateTime)Model.ContentPart.Date;
+    var income = (double)Model.ContentPart.Income;
+    var country = (string)Model.ContentPart.Country;
+    var state = (string)Model.ContentPart.State;
+    var city = (string)Model.ContentPart.City;
+    var address = (string)Model.ContentPart.Address;
+    var policy = (string)Model.ContentPart.Policy;
+    var limit= (int)Model.ContentPart.Limit;
+    var visibility = (bool)Model.ContentPart.Visibility;
+    var category = (string)Model.ContentPart.Category;
+    var currency = (string)Model.ContentPart.Currency;
+}
+
+<h1>@name</h1>
+
+<div>@T("Food service: {0}", foodType)</div>
+<div>@T("Drink service: {0}", drinkType)</div>
+<div>@T("Date: {0}", date)</div>
+<div>@T("Country: {0}", country)</div>
+<div>@T("State: {0}", state)</div>
+<div>@T("City: {0}", city)</div>
+<div>@T("Address: {0}", address)</div>
+<div>@T("Policy: {0}", policy)</div>
+<div>@T("Limit: {0}", limit)</div>
+<div>@T("Public: {0}", visibility)</div>
+<div>@T("Category: {0}", category)</div>
+
+@if (Model.ContentItem.Get(typeof(Orchard.Core.Common.Models.CommonPart)).Owner.Id.Equals(WorkContext.CurrentUser.Id))
+{ 
+    <div>@Html.ActionLink("Edit party", "PartyDashboard", "Party", new { Area = "SoftIT.HouseParty", id = Model.ContentPart.Id }, new { })</div>
+}
