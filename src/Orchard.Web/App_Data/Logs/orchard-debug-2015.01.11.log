@@ -83,3 +83,525 @@ System.Reflection.TargetInvocationException: Exception has been thrown by the ta
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-11 16:37:16,278 [69] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:16,508 [69] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 16:37:23,323 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,352 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,360 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,373 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,383 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,401 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,410 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,418 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:23,432 [24] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,024 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,030 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,036 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,042 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,076 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:37:53,086 [70] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Migrations\PartyMigrations.cs(47): error CS0246: The type or namespace name 'NewPartyWidgetPart' could not be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath) in e:\GitHub\HouseParty\src\Orchard\Environment\IBuildManager.cs:line 53
+2015-01-11 16:53:54,131 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:53:54,167 [7] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 16:54:00,155 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:00,177 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:00,185 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:00,246 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:00,256 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:00,267 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(18): error CS0737: 'SoftIT.HouseParty.Controllers.PartyController' does not implement interface member 'Orchard.ContentManagement.IUpdateModel.TryUpdateModel<TModel>(TModel, string, string[], string[])'. 'SoftIT.HouseParty.Controllers.PartyController.TryUpdateModel<TModel>(TModel, string, string[], string[])' cannot implement an interface member because it is not public.
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:31,586 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:31,618 [13] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 16:54:38,580 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:38,640 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:38,651 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:38,658 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:38,665 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:54:38,673 [13] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:40,707 [15] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:40,712 [15] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 16:58:46,504 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:46,518 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:46,527 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:46,535 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:46,542 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 16:58:46,549 [38] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:51,540 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:51,569 [7] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 17:00:57,376 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:57,391 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:57,403 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:57,411 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:57,419 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:00:57,521 [10] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(80): error CS0460: Constraints for override and explicit interface implementation methods are inherited from the base method, so they cannot be specified directly
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:10,812 [19] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:10,818 [19] Orchard.Environment.Extensions.ExtensionManager - (null) - No suitable loader found for extension "SoftIT.HouseParty"
+2015-01-11 17:03:16,761 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:16,919 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:16,958 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:16,967 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:16,976 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:03:17,047 [7] Orchard.Environment.DefaultBuildManager - (null) - Error when compiling assembly under ~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj.
+System.Web.HttpCompileException (0x80004005): e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Controllers\PartyController.cs(85): error CS0106: The modifier 'public' is not valid for this item
+   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetCompiledAssembly(String virtualPath)
+   at Orchard.Environment.DefaultBuildManager.GetCompiledAssembly(String virtualPath)
+2015-01-11 17:08:17,788 [53] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - Default - NullReferenceException thrown from IContentPartDriver by SoftIT.HouseParty.Drivers.PartyPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SoftIT.HouseParty.Drivers.PartyPartDriver.Editor(PartyPart part, Object shapeHelper) in e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs:line 31
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.Orchard.ContentManagement.Drivers.IContentPartDriver.BuildEditor(BuildEditorContext context)
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator.<>c__DisplayClassd.<BuildEditor>b__c(IContentPartDriver driver)
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger)

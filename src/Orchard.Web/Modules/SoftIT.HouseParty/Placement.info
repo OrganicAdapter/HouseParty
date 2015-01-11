@@ -1,4 +1,6 @@
 ﻿<Placement>
 	<Place Parts_Party_Edit="Content: 1"
          Parts_Party="Content: 1"/>
+
+  <Place Parts_NewPartyWidget="Content: 1" />
 </Placement>

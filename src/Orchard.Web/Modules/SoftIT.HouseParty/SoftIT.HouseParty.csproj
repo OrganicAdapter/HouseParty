@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\External\angular.js" />
+    <Content Include="Scripts\party-controller.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -92,11 +93,14 @@
     <Compile Include="Constants\ContentTypes.cs" />
     <Compile Include="Constants\PartyConstants.cs" />
     <Compile Include="Constants\ServicePrices.cs" />
+    <Compile Include="Controllers\PartyController.cs" />
+    <Compile Include="Drivers\NewPartyWidgetPartDriver.cs" />
     <Compile Include="Drivers\PartyPartDriver.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
     <Compile Include="Migrations\InvitationMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
+    <Compile Include="Models\NewPartyWidgetPart.cs" />
     <Compile Include="Models\PartyPart.cs" />
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
@@ -110,7 +114,10 @@
     <Content Include="Views\Parts\Party.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Content Include="Views\SoftIT.HouseParty.PartyDashboard.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\NewPartyWidget.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

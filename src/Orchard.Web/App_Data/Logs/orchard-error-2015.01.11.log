@@ -84,3 +84,10 @@ System.Reflection.TargetInvocationException: Exception has been thrown by the ta
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+2015-01-11 17:08:17,788 [53] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - Default - NullReferenceException thrown from IContentPartDriver by SoftIT.HouseParty.Drivers.PartyPartDriver
+ http://localhost:2014/HouseParty/SoftIT.HouseParty/Party/PartyDashboard
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SoftIT.HouseParty.Drivers.PartyPartDriver.Editor(PartyPart part, Object shapeHelper) in e:\GitHub\HouseParty\src\Orchard.Web\Modules\SoftIT.HouseParty\Drivers\PartyPartDriver.cs:line 31
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.Orchard.ContentManagement.Drivers.IContentPartDriver.BuildEditor(BuildEditorContext context)
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator.<>c__DisplayClassd.<BuildEditor>b__c(IContentPartDriver driver)
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger)

@@ -42,7 +42,15 @@ namespace SoftIT.HouseParty.Migrations
                     .WithPart("CommonPart")
                     .WithPart("BodyPart"));
 
-            return 3;
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
+                type => type
+                    .WithPart(typeof(NewPartyWidgetPart).Name)
+                    .WithPart("CommonPart")
+                    .WithPart("WidgetPart")
+                    .WithSetting("Stereotype", "Widget")
+                );
+
+            return 5;
         }
 
         public int UpdateFrom1()
@@ -65,6 +73,30 @@ namespace SoftIT.HouseParty.Migrations
                 .AddColumn("Currency", DbType.String));
 
             return 3;
+        }
+
+        public int UpdateFrom3()
+        {
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
+                type => type
+                    .WithPart(typeof(PartyPart).Name)
+                    .WithPart("CommonPart")
+                    .WithPart("WidgetPart")
+                    .WithSetting("Stereotype", "Widget")
+                );
+
+            return 4;
+        }
+
+        public int UpdateFrom4()
+        {
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
+                type => type
+                    .RemovePart(typeof(PartyPart).Name)
+                    .WithPart(typeof(NewPartyWidgetPart).Name)
+                );
+
+            return 5;
         }
     }
 }
