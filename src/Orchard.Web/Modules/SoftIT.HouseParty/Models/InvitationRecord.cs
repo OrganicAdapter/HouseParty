@@ -9,8 +9,9 @@ namespace SoftIT.HouseParty.Models
     public class InvitationRecord
     {
         public virtual int Id { get; set; }
-        public virtual int InvitingId { get; set; }
+        public virtual int InviterId { get; set; }
         public virtual int InvitedId { get; set; }
         public virtual int PartyId { get; set; }
+        public virtual string State { get; set; }
     }
 }

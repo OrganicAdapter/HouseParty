@@ -94,18 +94,23 @@
     <Compile Include="Constants\PartyConstants.cs" />
     <Compile Include="Constants\ServicePrices.cs" />
     <Compile Include="Controllers\PartyController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Drivers\HousePartyUserPartDriver.cs" />
     <Compile Include="Drivers\NewPartyWidgetPartDriver.cs" />
     <Compile Include="Drivers\PartyPartDriver.cs" />
+    <Compile Include="Drivers\UserSearchWidgetPartDriver.cs" />
+    <Compile Include="Handlers\UserSearchWidgetPartHandler.cs" />
     <Compile Include="Handlers\HousePartyUserPartHandler.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
     <Compile Include="Migrations\HousePartyUserMigrations.cs" />
     <Compile Include="Migrations\InvitationMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
+    <Compile Include="Migrations\WidgetsMigrations.cs" />
     <Compile Include="Models\HousePartyUserPart.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\NewPartyWidgetPart.cs" />
     <Compile Include="Models\PartyPart.cs" />
+    <Compile Include="Models\UserSearchWidgetPart.cs" />
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Services\HousePartyUserMoneyService.cs" />
   </ItemGroup>
@@ -129,6 +134,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\HousePartyUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\UserSearchWidget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SoftIT.HouseParty.UserDashboard.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SoftIT.HouseParty.UserSummary.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

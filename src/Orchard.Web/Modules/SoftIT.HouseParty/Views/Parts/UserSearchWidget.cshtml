@@ -1,0 +1,14 @@
+﻿@using Orchard.Security
+@using Orchard.ContentManagement
+
+@{
+    var usersQuery = (IContentQuery<IUser>)Model.ContentPart.Users;
+    var users = usersQuery.List<IUser>();
+}
+
+<ul>
+    @foreach (var user in users)
+    {   
+        <li>@Html.ActionLink(user.UserName, "UserDashboard", "User", new { Area = "SoftIT.HouseParty", id = user.Id }, new { })</li>
+    }
+</ul>

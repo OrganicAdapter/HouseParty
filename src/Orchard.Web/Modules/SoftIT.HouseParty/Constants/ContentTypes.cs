@@ -9,5 +9,6 @@ namespace SoftIT.HouseParty.Constants
     {
         public const string Party = "Party";
         public const string PartyDashboardWidget = "PartyDashboardWidget";
+        public const string UserSearchWidget = "UserSearchWidget";
     }
 }
