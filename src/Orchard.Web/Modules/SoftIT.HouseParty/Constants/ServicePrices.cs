@@ -7,7 +7,7 @@ namespace SoftIT.HouseParty.Constants
 {
     public static class ServicePrices
     {
-        public const int Party = 500;
+        public const int Party = 0;
         public const int IncomePrice = 100;
         public const int InvitationPrice = 10;
         public const int PrivatePartyPrice = 30;

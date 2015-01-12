@@ -1,1 +1,16 @@
-﻿@Display(Model.DisplayShape())
+﻿@using Orchard.ContentManagement
+
+@{
+    var contentManager = WorkContext.Resolve<IContentManager>();
+    var usersQuery = contentManager.Query("User").ForPart<Orchard.Security.IUser>();
+    var users = usersQuery.List<Orchard.Security.IUser>();
+}
+
+@Display(Model.DisplayShape())
+
+<ul>
+    @foreach (var friend in users)
+    {
+        <li>@friend.UserName</li>
+    }
+</ul>

@@ -5,4 +5,6 @@
   <Place Parts_NewPartyWidget="Content: 1" />
 
   <Place Parts_UserSearchWidget="Content: 1" />
+
+  <Place Parts_HousePartyUser="Content: 2" />
 </Placement>

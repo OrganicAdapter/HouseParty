@@ -7,3 +7,8 @@
 <div>@T("Likes: {0}", likes)</div>
 <div>@T("Dislikes: {0}", dislikes)</div>
 <div>@T("Money: {0}", money)</div>
+
+@if (Model.ContentItem.Id.Equals(WorkContext.CurrentUser.Id))
+{
+    <div>@Html.ActionLink("Edit personal information", "UserDashboard", "User", new { Area = "SoftIT.HouseParty", id = Model.ContentPart.Id }, new { })</div>
+}
