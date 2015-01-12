@@ -26,6 +26,11 @@ namespace SoftIT.ExtendedUsers.Drivers
             T = NullLocalizer.Instance;
         }
 
+        protected override DriverResult Display(ExtendedUserPart part, string displayType, dynamic shapeHelper)
+        {
+            return ContentShape("Parts_ExtendedUser", () => shapeHelper.Parts_ExtendedUser());
+        }
+
         protected override DriverResult Editor(ExtendedUserPart part, dynamic shapeHelper)
         {
             return ContentShape("Parts_ExtendedUser_Edit", () => shapeHelper.EditorTemplate(

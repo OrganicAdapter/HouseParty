@@ -1,3 +1,4 @@
 ﻿<Placement>
-  <Place Parts_ExtendedUser_Edit="Content: 2" />
+  <Place Parts_ExtendedUser="Content: 1"
+         Parts_ExtendedUser_Edit="Content: 2" />
 </Placement>
