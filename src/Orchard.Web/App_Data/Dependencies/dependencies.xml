@@ -1035,15 +1035,21 @@
   </Dependency>
   <Dependency>
     <ModuleName>SoftIT.ExtendedUsers</ModuleName>
-    <VirtualPath>~/Modules/SoftIT.ExtendedUsers/SoftIT.ExtendedUsers.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/SoftIT.ExtendedUsers/bin/SoftIT.ExtendedUsers.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References />
   </Dependency>
   <Dependency>
     <ModuleName>SoftIT.HouseParty</ModuleName>
-    <VirtualPath>~/Modules/SoftIT.HouseParty/SoftIT.HouseParty.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References />
+    <VirtualPath>~/Modules/SoftIT.HouseParty/bin/SoftIT.HouseParty.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>SoftIT.ExtendedUsers</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/SoftIT.ExtendedUsers/bin/SoftIT.ExtendedUsers.dll</VirtualPath>
+      </Reference>
+    </References>
   </Dependency>
   <Dependency>
     <ModuleName>SysCache</ModuleName>

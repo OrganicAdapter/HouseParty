@@ -19,14 +19,14 @@ namespace SoftIT.HouseParty.Handlers
         {
             Filters.Add(StorageFilter.For(repository));
 
-            OnActivated<PartyPart>((context, part) =>
-            {
-                part.OrganizerField.Loader(() =>
-                    contentManagerWork.Value
-                        .Query("User")
-                        .List<IUser>()
-                        .FirstOrDefault(record => record.Id.Equals(part.As<CommonPart>().Owner.Id)));
-            });
+            //OnActivated<PartyPart>((context, part) =>
+            //{
+            //    part.OrganizerField.Loader(() =>
+            //        contentManagerWork.Value
+            //            .Query("User")
+            //            .List<IUser>()
+            //            .FirstOrDefault(record => record.Id.Equals(part.As<CommonPart>().Owner.Id)));
+            //});
         }
     }
 }

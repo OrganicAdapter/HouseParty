@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SoftIT.HouseParty.Models
 {
-    public class CreatePartyPart : ContentPart
+    public class NewPartyWidgetPart : ContentPart
     {
     }
 }

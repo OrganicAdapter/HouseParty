@@ -1,59 +1,9 @@
-﻿@using Orchard.Security
-@using SoftIT.HouseParty.Models
-
-@{
-    var firstName = (string)Model.ContentPart.FirstName;
-    var lastName = (string)Model.ContentPart.LastName;
-    var country = (string)Model.ContentPart.Country;
-    var state = (string)Model.ContentPart.State;
-    var city = (string)Model.ContentPart.City;
-    var address = (string)Model.ContentPart.Address;
-    var rating = (double)Model.ContentPart.Rating;
-    var friends = (IEnumerable<HousePartyUserPart>)Model.ContentPart.Friends;
-    var friendRequests = (IEnumerable<HousePartyUserPart>)Model.ContentPart.FriendRequests;
+﻿@{
+    var likes = (int)Model.ContentPart.Likes;
+    var dislikes = (int)Model.ContentPart.Dislikes;
+    var money = (int)Model.ContentPart.Money;
 }
 
-<div>@T("First name: {0}", firstName)</div>
-<div>@T("Last name: {0}", lastName)</div>
-<div>@T("Country: {0}", country)</div>
-<div>@T("State: {0}", state)</div>
-<div>@T("City: {0}", city)</div>
-<div>@T("Address: {0}", address)</div>
-<div>@T("Rating: {0}", rating)</div>
-
-@if(WorkContext.CurrentUser.Id.Equals((int)Model.ContentPart.Id))
-{ 
-    <div>
-        <h2>@T("Friend requests")</h2>
-        <ul>
-            @foreach (var request in friendRequests)
-            {
-                if (!string.IsNullOrWhiteSpace(request.FirstName) &&
-                    !string.IsNullOrWhiteSpace(request.LastName))
-                {
-                    <li>
-                        <div>@Html.ActionLink(request.FirstName + " " + request.LastName, "Index", new { userId = request.Id })</div>
-                        <div>
-                            @Html.ActionLink("Accept", "Accept", new { userId = request.Id })
-                            @Html.ActionLink("Decline", "Decline", new { userId = request.Id })
-                        </div>
-                    </li>
-                }
-            }
-        </ul>
-    </div>
-    <div>
-        <h2>@T("Friends")</h2>
-        <ul>
-            @foreach (var friend in friends)
-            {
-                if (!string.IsNullOrWhiteSpace(friend.FirstName) &&
-                    !string.IsNullOrWhiteSpace(friend.LastName))
-                {
-                    <li>@Html.ActionLink(friend.FirstName + " " + friend.LastName, "Index", new { userId = friend.Id })</li>
-                }
-            }
-        </ul>
-    </div>
-}
-
+<div>@T("Likes: {0}", likes)</div>
+<div>@T("Dislikes: {0}", dislikes)</div>
+<div>@T("Money: {0}", money)</div>

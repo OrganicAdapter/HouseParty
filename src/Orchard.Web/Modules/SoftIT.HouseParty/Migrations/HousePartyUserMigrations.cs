@@ -1,13 +1,12 @@
 ﻿using Orchard.Data.Migration;
-using SoftIT.HouseParty.Models;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
-using Orchard.Core.Contents.Extensions;
-using Orchard.Data.Migration;
 using Orchard.ContentManagement.MetaData;
+using SoftIT.ExtendedUsers.Models;
+using System.Data;
+using SoftIT.HouseParty.Models;
 
 namespace SoftIT.HouseParty.Migrations
 {
@@ -15,19 +14,14 @@ namespace SoftIT.HouseParty.Migrations
     {
         public int Create()
         {
-            SchemaBuilder.CreateTable(typeof(HousePartyUserPartRecord).Name, 
-                table => table
-                    .ContentPartRecord()
-                    .Column("FirstName", DbType.String)
-                    .Column("LastName", DbType.String)
-                    .Column("Country", DbType.String)
-                    .Column("State", DbType.String)
-                    .Column("City", DbType.String)
-                    .Column("Address", DbType.String)
-                    .Column("Likes", DbType.Int32)
-                    .Column("Dislikes", DbType.Int32));
+            SchemaBuilder.CreateTable(typeof(HousePartyUserPartRecord).Name,
+               table => table
+                   .ContentPartRecord()
+                   .Column("Likes", DbType.Int32)
+                   .Column("Dislikes", DbType.Int32)
+                   .Column("Money", DbType.Int32));
 
-            ContentDefinitionManager.AlterTypeDefinition("User", 
+            ContentDefinitionManager.AlterTypeDefinition("User",
                 type => type
                     .WithPart(typeof(HousePartyUserPart).Name));
 

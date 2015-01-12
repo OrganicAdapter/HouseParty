@@ -21,20 +21,5 @@ namespace SoftIT.HouseParty.Drivers
         {
             return ContentShape("Parts_HousePartyUser", () => shapeHelper.Parts_HousePartyUser());
         }
-
-        protected override DriverResult Editor(HousePartyUserPart part, dynamic shapeHelper)
-        {
-            return ContentShape("Parts_HousePartyUser_Edit", () => shapeHelper.EditorTemplate(
-                TemplateName: "Parts/HousePartyUser",
-                Model: part,
-                Prefix: Prefix));
-        }
-
-        protected override DriverResult Editor(HousePartyUserPart part, Orchard.ContentManagement.IUpdateModel updater, dynamic shapeHelper)
-        {
-            updater.TryUpdateModel(part, Prefix, null, null);
-
-            return Editor(part, shapeHelper);
-        }
     }
 }

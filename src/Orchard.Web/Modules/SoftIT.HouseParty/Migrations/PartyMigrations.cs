@@ -23,17 +23,17 @@ namespace SoftIT.HouseParty.Migrations
                     .Column("PublicType", DbType.String)
                     .Column("FoodType", DbType.String)
                     .Column("DrinkType", DbType.String)
-                    .Column("Date", DbType.String)
-                    .Column("BasePrice", DbType.Double)
-                    .Column("Price", DbType.Double)
+                    .Column("Date", DbType.DateTime)
+                    .Column("Income", DbType.Double)
                     .Column("Country", DbType.String)
                     .Column("State", DbType.String)
                     .Column("City", DbType.String)
                     .Column("Address", DbType.String)
                     .Column("Policy", DbType.String)
-                    .Column("Rating", DbType.Double)
                     .Column("Limit", DbType.Int32)
-                    .Column("Visibility", DbType.Boolean));
+                    .Column("Visibility", DbType.Boolean)
+                    .Column("Category", DbType.String)
+                    .Column("Currency", DbType.String));
 
             ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Party,
                 type => type
@@ -41,6 +41,14 @@ namespace SoftIT.HouseParty.Migrations
                     .WithPart(typeof(PartyPart).Name)
                     .WithPart("CommonPart")
                     .WithPart("BodyPart"));
+
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.PartyDashboardWidget,
+                type => type
+                    .WithPart(typeof(NewPartyWidgetPart).Name)
+                    .WithPart("CommonPart")
+                    .WithPart("WidgetPart")
+                    .WithSetting("Stereotype", "Widget")
+                );
 
             return 1;
         }

@@ -1,0 +1,19 @@
+﻿@{
+    var firstName = (string)Model.ContentPart.FirstName;
+    var lastName = (string)Model.ContentPart.LastName;
+    var country = (string)Model.ContentPart.Country;
+    var state = (string)Model.ContentPart.State;
+    var city = (string)Model.ContentPart.City;
+    var address = (string)Model.ContentPart.Address;
+    var phone = (string)Model.ContentPart.Phone;
+    var dateOfBirth = (string)Model.ContentPart.DateOfBirth;
+}
+
+<div>@T("First name: {0}", firstName)</div>
+<div>@T("Last name: {0}", lastName)</div>
+<div>@T("Country: {0}", country)</div>
+<div>@T("State: {0}", state)</div>
+<div>@T("City: {0}", city)</div>
+<div>@T("Address: {0}", address)</div>
+<div>@T("Phone: {0}", phone)</div>
+<div>@T("Date of birth: {0}", dateOfBirth)</div>

@@ -1,31 +1,17 @@
-﻿using System;
+﻿using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Core.Common.Models;
+using Orchard.Data;
+using Orchard.Localization;
+using Orchard.Mvc;
+using Orchard.Themes;
+using Orchard.UI.Notify;
+using SoftIT.HouseParty.Constants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
-using Orchard.ContentManagement;
-using Orchard.ContentManagement.Aspects;
-using Orchard.ContentManagement.MetaData;
-using Orchard.ContentManagement.MetaData.Models;
-using Orchard.Core.Common.Models;
-using Orchard.Core.Containers.Models;
-using Orchard.Core.Contents.Settings;
-using Orchard.Core.Contents.ViewModels;
-using Orchard.Data;
-using Orchard.DisplayManagement;
-using Orchard.Localization;
-using Orchard.Logging;
-using Orchard.Mvc.Extensions;
-using Orchard.Mvc.Html;
-using Orchard.UI.Navigation;
-using Orchard.UI.Notify;
-using Orchard.Settings;
-using Orchard.Utility.Extensions;
-using Orchard.Themes;
-using Orchard;
-using Orchard.Core.Contents;
-using SoftIT.HouseParty.Constants;
 
 namespace SoftIT.HouseParty.Controllers
 {
@@ -33,69 +19,78 @@ namespace SoftIT.HouseParty.Controllers
     [Authorize]
     public class PartyController : Controller, IUpdateModel
     {
-        private readonly IContentManager _contentManager;
         private readonly IOrchardServices _orchardServices;
+        private readonly IContentManager _contentManager;
         private readonly ITransactionManager _transactionManager;
+        private readonly INotifier _notifier;
 
-        public Localizer T { get; set; }
+        private Localizer T { get; set; }
 
-        public PartyController(IContentManager contentManager, IOrchardServices orchardServices, ITransactionManager transactionManager)
+        public PartyController(IOrchardServices orchardServices, IContentManager contentManager, ITransactionManager transactionManager, INotifier notifier)
         {
-            _contentManager = contentManager;
             _orchardServices = orchardServices;
+            _contentManager = contentManager;
             _transactionManager = transactionManager;
+            _notifier = notifier;
+
             T = NullLocalizer.Instance;
         }
 
-        public ActionResult Create()
+        public ActionResult PartyDashboard(int id = 0)
         {
-            var party = _contentManager.New(ContentTypes.Party);
+            var item = GetItem(id);
+            if (item == null) return new HttpNotFoundResult();
 
-            var viewModel = _orchardServices.New.ViewModel(
-                PartyEditor: _contentManager.BuildEditor(party));
-
-            return View(viewModel);
-        }
-
-        [HttpPost, ActionName("Create")]
-        [Orchard.Mvc.FormValueRequired("submit.Save")]
-        public ActionResult CreatePOST(string id, string returnUrl)
-        {
-            return CreatePOST(id, returnUrl, contentItem =>
-            {
-                if (!contentItem.Has<IPublishingControlAspect>() && !contentItem.TypeDefinition.Settings.GetModel<ContentTypeSettings>().Draftable)
-                    _contentManager.Publish(contentItem);
-            });
-        }
-
-        private ActionResult CreatePOST(string id, string returnUrl, Action<ContentItem> conditionallyPublish)
-        {
-            var contentItem = _contentManager.New(id);
-
-            if (!_orchardServices.Authorizer.Authorize(Permissions.EditContent, contentItem, T("Couldn't create content")))
+            if (!item.As<CommonPart>().Owner.Id.Equals(_orchardServices.WorkContext.CurrentUser.Id))
                 return new HttpUnauthorizedResult();
 
-            _contentManager.Create(contentItem, VersionOptions.Draft);
+            return PartyDashboardShapeResult(item);
+        }
 
-            var model = _contentManager.UpdateEditor(contentItem, this);
+        [HttpPost, ActionName("PartyDashboard")]
+        public ActionResult PartyDashboardPost(int id = 0)
+        {
+            var item = GetItem(id);
+            if (item == null) return new HttpNotFoundResult();
+
+            if (id == 0) _contentManager.Create(item, VersionOptions.Draft);
+
+            var editorShape = _contentManager.UpdateEditor(item, this);
 
             if (!ModelState.IsValid)
             {
                 _transactionManager.Cancel();
-                return View(model);
+                return PartyDashboardShapeResult(item);
             }
 
-            conditionallyPublish(contentItem);
+            _contentManager.Publish(item);
+            _notifier.Information(T("The party was successfully saved."));
 
-            _orchardServices.Notifier.Information(string.IsNullOrWhiteSpace(contentItem.TypeDefinition.DisplayName)
-                ? T("Your content has been created.")
-                : T("Your {0} has been created.", contentItem.TypeDefinition.DisplayName));
-            if (!string.IsNullOrEmpty(returnUrl))
-            {
-                return this.RedirectLocal(returnUrl);
-            }
-            var adminRouteValues = _contentManager.GetItemMetadata(contentItem).AdminRouteValues;
-            return RedirectToRoute(adminRouteValues);
+            return RedirectToAction("PartySummary", new { id = item.Id });
+        }
+
+        public ActionResult PartySummary(int id)
+        {
+            var item = _contentManager.Get(id);
+            if (item == null) return new HttpNotFoundResult();
+
+            var itemDisplayShape = _contentManager.BuildDisplay(item);
+            var displayShape = _orchardServices.New.SoftIT_HouseParty_PartySummary(DisplayShape: itemDisplayShape);
+
+            return new ShapeResult(this, displayShape);
+        }
+
+        private ShapeResult PartyDashboardShapeResult(ContentItem item)
+        {
+            var itemEditorShape = _contentManager.BuildEditor(item);
+            var editorShape = _orchardServices.New.SoftIT_HouseParty_PartyDashboard(EditorShape: itemEditorShape, Id: item.Id);
+
+            return new ShapeResult(this, editorShape);
+        }
+
+        private ContentItem GetItem(int id)
+        { 
+            return id.Equals(0) ? _contentManager.New(ContentTypes.Party) : _contentManager.Get(id);
         }
 
         bool IUpdateModel.TryUpdateModel<TModel>(TModel model, string prefix, string[] includeProperties, string[] excludeProperties)

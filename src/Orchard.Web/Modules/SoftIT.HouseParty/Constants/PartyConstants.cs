@@ -11,14 +11,26 @@ namespace SoftIT.HouseParty.Constants
         {
             "Public",
             "Restricted",
-            "Private"
+            "Exclusive"
         };
 
         public static IEnumerable<string> SupplyTypes = new[]
         {
             "Fix",
+            "Checklist",
             "Ordered",
             "Self-service"
+        };
+
+        public static IEnumerable<string> Categories = new[]
+        {
+            "Christmas",
+            "New year",
+            "Easter",
+            "Birthday",
+            "Nameday",
+            "Thanks giving",
+            "Other"
         };
     }
 }

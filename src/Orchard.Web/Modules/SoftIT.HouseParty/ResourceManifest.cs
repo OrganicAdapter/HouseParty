@@ -13,7 +13,7 @@ namespace SoftIT.CRM
             var manifest = builder.Add();
 
             manifest.DefineScript("AngularJS").SetUrl("External/angular.js");
-            manifest.DefineScript("UserSearch.Filter").SetUrl("usersearch-filter.js").SetDependencies("AngularJS");
+            manifest.DefineScript("PartyController").SetUrl("party-controller.js").SetDependencies("AngularJS");
         }
     }
 }

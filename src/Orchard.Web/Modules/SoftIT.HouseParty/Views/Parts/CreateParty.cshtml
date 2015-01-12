@@ -1,8 +1,0 @@
-﻿@using Orchard.ContentManagement
-
-@{
-    var contentManager = WorkContext.Resolve<IContentManager>();
-    var party = contentManager.New(SoftIT.HouseParty.Constants.ContentTypes.Party);
-}
-
-@Html.ItemEditLink("New party", party)

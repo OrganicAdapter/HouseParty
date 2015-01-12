@@ -15,9 +15,10 @@ namespace SoftIT.HouseParty.Migrations
             SchemaBuilder.CreateTable(typeof(InvitationRecord).Name,
                 table => table
                     .Column("Id", DbType.Int32, column => column.PrimaryKey().Identity())
-                    .Column("InvitingId", DbType.Int32)
+                    .Column("InviterId", DbType.Int32)
                     .Column("InvitedId", DbType.Int32)
-                    .Column("PartyId", DbType.Int32));
+                    .Column("PartyId", DbType.Int32)
+                    .Column("State", DbType.String));
 
             return 1;
         }
