@@ -1,0 +1,21 @@
+﻿@using Orchard.Security
+@using Orchard.ContentManagement
+
+@{
+    var partyId = (int)Model.PartyId;
+    var friends = (IEnumerable<IUser>)Model.Friends;
+}
+
+@using (Html.BeginFormAntiForgeryPost("InviteUser", FormMethod.Post, new { partyId = partyId, invitedUserId = WorkContext.CurrentUser.Id }))
+{
+    <fieldset>
+        <ol>
+            @foreach (var friend in friends)
+            {
+                <li>
+                    <input type="submit" value="@friend.UserName" />
+                </li>
+            }
+        </ol>
+    </fieldset>
+}

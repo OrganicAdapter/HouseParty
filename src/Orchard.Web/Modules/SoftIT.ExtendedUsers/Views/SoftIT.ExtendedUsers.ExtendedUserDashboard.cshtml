@@ -1,0 +1,12 @@
+﻿@{
+    var id = int.Parse(Model.Id);
+}
+
+@Html.ActionLink("View profile", "ExtendedUserSummary", new { id = id })
+
+@Html.ValidationSummary(T("Some values are not correct. Please fill the fields the right way and fill the required forms.").ToString())
+
+@using (Html.BeginFormAntiForgeryPost())
+{
+    @Display(Model.EditorShape())
+}

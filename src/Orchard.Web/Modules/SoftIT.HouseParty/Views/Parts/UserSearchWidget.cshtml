@@ -9,6 +9,6 @@
 <ul>
     @foreach (var user in users)
     {   
-        <li>@Html.ActionLink(user.UserName, "UserDashboard", "User", new { Area = "SoftIT.HouseParty", id = user.Id }, new { })</li>
+        <li>@Html.ActionLink(user.UserName, "UserSummary", "User", new { Area = "SoftIT.HouseParty", id = user.Id }, new { })</li>
     }
 </ul>

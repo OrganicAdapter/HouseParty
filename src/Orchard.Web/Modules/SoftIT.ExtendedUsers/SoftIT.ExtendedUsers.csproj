@@ -92,9 +92,6 @@
     <Compile Include="Models\ExtendedUserPart.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Placement.info" />
   </ItemGroup>
   <ItemGroup>

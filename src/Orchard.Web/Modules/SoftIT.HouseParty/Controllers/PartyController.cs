@@ -4,9 +4,11 @@ using Orchard.Core.Common.Models;
 using Orchard.Data;
 using Orchard.Localization;
 using Orchard.Mvc;
+using Orchard.Security;
 using Orchard.Themes;
 using Orchard.UI.Notify;
 using SoftIT.HouseParty.Constants;
+using SoftIT.HouseParty.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,15 +25,17 @@ namespace SoftIT.HouseParty.Controllers
         private readonly IContentManager _contentManager;
         private readonly ITransactionManager _transactionManager;
         private readonly INotifier _notifier;
+        private readonly IRepository<InvitationRecord> _invitationRepository;
 
         private Localizer T { get; set; }
 
-        public PartyController(IOrchardServices orchardServices, IContentManager contentManager, ITransactionManager transactionManager, INotifier notifier)
+        public PartyController(IOrchardServices orchardServices, IContentManager contentManager, ITransactionManager transactionManager, INotifier notifier, IRepository<InvitationRecord> invitationRepository)
         {
             _orchardServices = orchardServices;
             _contentManager = contentManager;
             _transactionManager = transactionManager;
             _notifier = notifier;
+            _invitationRepository = invitationRepository;
 
             T = NullLocalizer.Instance;
         }
@@ -75,9 +79,35 @@ namespace SoftIT.HouseParty.Controllers
             if (item == null) return new HttpNotFoundResult();
 
             var itemDisplayShape = _contentManager.BuildDisplay(item);
-            var displayShape = _orchardServices.New.SoftIT_HouseParty_PartySummary(DisplayShape: itemDisplayShape);
+            var displayShape = _orchardServices.New.SoftIT_HouseParty_PartySummary(DisplayShape: itemDisplayShape, Id: item.Id);
 
             return new ShapeResult(this, displayShape);
+        }
+
+        public ActionResult InviteUser(int partyId)
+        {
+            var invitedFriends = _invitationRepository.Table.Where(invitation => invitation.PartyId.Equals(partyId)).Select(friend => _contentManager.Get(friend.Id)).ToList();
+            var invitedFriendsIds = invitedFriends.Select(friend => friend.Id).ToList();
+            var allFriends = _contentManager.Query("User").ForPart<IUser>().List<IUser>();
+            var friends = allFriends.Where(friend => !invitedFriendsIds.Contains(friend.Id));
+
+            var inviteFriendListShape = _orchardServices.New.SoftIT_HouseParty_InviteFriend(Friends: friends, PartyId: partyId);
+
+            return new ShapeResult(this, inviteFriendListShape);
+        }
+
+        [HttpPost, ActionName("InviteUser")]
+        public ActionResult InviteUserPost(int partyId, int invitedUserId)
+        {
+            _invitationRepository.Create(new InvitationRecord
+                {
+                    InviterId = _orchardServices.WorkContext.CurrentUser.Id,
+                    InvitedId = invitedUserId,
+                    PartyId = partyId,
+                    State = "Pending"
+                });
+
+            return RedirectToAction("PartySummary", new { id = partyId });
         }
 
         private ShapeResult PartyDashboardShapeResult(ContentItem item)
@@ -89,7 +119,7 @@ namespace SoftIT.HouseParty.Controllers
         }
 
         private ContentItem GetItem(int id)
-        { 
+        {
             return id.Equals(0) ? _contentManager.New(ContentTypes.Party) : _contentManager.Get(id);
         }
 

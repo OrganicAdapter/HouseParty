@@ -103,9 +103,10 @@
     <Compile Include="Handlers\HousePartyUserPartHandler.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
     <Compile Include="Migrations\HousePartyUserMigrations.cs" />
-    <Compile Include="Migrations\InvitationMigrations.cs" />
+    <Compile Include="Migrations\RecordMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
     <Compile Include="Migrations\WidgetsMigrations.cs" />
+    <Compile Include="Models\FriendRequestRecord.cs" />
     <Compile Include="Models\HousePartyUserPart.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\NewPartyWidgetPart.cs" />
@@ -124,13 +125,7 @@
     <Content Include="Views\Parts\Party.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\SoftIT.HouseParty.PartyDashboard.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Parts\NewPartyWidget.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\SoftIT.HouseParty.PartySummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\HousePartyUser.cshtml" />
@@ -139,9 +134,10 @@
     <Content Include="Views\Parts\UserSearchWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\SoftIT.HouseParty.InviteFriend.cshtml" />
+    <Content Include="Views\SoftIT.HouseParty.PartyDashboard.cshtml" />
+    <Content Include="Views\SoftIT.HouseParty.PartySummary.cshtml" />
     <Content Include="Views\SoftIT.HouseParty.UserDashboard.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\SoftIT.HouseParty.UserSummary.cshtml" />
   </ItemGroup>
   <PropertyGroup>
