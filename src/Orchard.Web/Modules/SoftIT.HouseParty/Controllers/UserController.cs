@@ -25,6 +25,7 @@ namespace SoftIT.HouseParty.Controllers
         private readonly ITransactionManager _transactionManager;
         private readonly INotifier _notifier;
         private readonly IRepository<FriendRequestRecord> _friendRequestRepository;
+        private readonly IRepository<FriendRecord> _friendRepository;
 
         private Localizer T { get; set; }
 
@@ -33,13 +34,15 @@ namespace SoftIT.HouseParty.Controllers
             IContentManager contentManager, 
             ITransactionManager transactionManager, 
             INotifier notifier,
-            IRepository<FriendRequestRecord> friendRequestRepository)
+            IRepository<FriendRequestRecord> friendRequestRepository,
+            IRepository<FriendRecord> friendRepository)
         {
             _orchardServices = orchardServices;
             _contentManager = contentManager;
             _transactionManager = transactionManager;
             _notifier = notifier;
             _friendRequestRepository = friendRequestRepository;
+            _friendRepository = friendRepository;
 
             T = NullLocalizer.Instance;
         }
@@ -100,16 +103,16 @@ namespace SoftIT.HouseParty.Controllers
         {
             var friendRequest = _friendRequestRepository.Table.FirstOrDefault(request => request.Id.Equals(requestId));
 
-            switch (result)
-            { 
-                case 0:
-                    
-                    break;
-
-                case 1:
-                    _friendRequestRepository.Delete(friendRequest);
-                    break;
+            if (result.Equals(0))
+            {
+                _friendRepository.Create(new FriendRecord
+                {
+                    FriendOneId = friendRequest.RequestedId,
+                    FriendTwoId = friendRequest.RequesterId
+                });
             }
+
+            _friendRequestRepository.Delete(friendRequest);
 
             return Redirect(Request.UrlReferrer.ToString());
         }

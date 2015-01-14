@@ -1,0 +1,21 @@
+﻿@using Orchard.Security
+@using Orchard.ContentManagement
+
+@{
+    var helperId = 0;
+    var friends = (IEnumerable<SoftIT.HouseParty.Models.FriendRecord>)Model.ContentPart.Friends;
+    var contentManager = WorkContext.Resolve<IContentManager>();
+}
+
+<h2>@T("Friends")</h2>
+
+<ul>
+    @foreach (var friend in friends)
+    {
+        <li>
+            <span hidden="hidden">@(helperId = friend.FriendOneId.Equals(WorkContext.CurrentUser.Id) ? friend.FriendOneId : friend.FriendTwoId)</span>
+            @(contentManager.Get<IUser>(helperId).UserName)
+        </li>
+    }
+</ul>
+

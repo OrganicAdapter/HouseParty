@@ -107,6 +107,7 @@
     <Compile Include="Migrations\PartyMigrations.cs" />
     <Compile Include="Migrations\WidgetsMigrations.cs" />
     <Compile Include="Models\FriendRequestRecord.cs" />
+    <Compile Include="Models\FriendRecord.cs" />
     <Compile Include="Models\HousePartyUserPart.cs" />
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\NewPartyWidgetPart.cs" />
@@ -142,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\FriendRequests.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Friends.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -15,6 +15,10 @@ namespace SoftIT.HouseParty.Models
         internal LazyField<IEnumerable<FriendRequestRecord>> FriendRequestsField { get { return _friendRequestsField; } }
         public IEnumerable<FriendRequestRecord> FriendRequests { get { return _friendRequestsField.Value; } }
 
+        private readonly LazyField<IEnumerable<FriendRecord>> _friendsField = new LazyField<IEnumerable<FriendRecord>>();
+        internal LazyField<IEnumerable<FriendRecord>> FriendsField { get { return _friendsField; } }
+        public IEnumerable<FriendRecord> Friends { get { return _friendsField.Value; } }
+
         public int Likes
         {
             get { return Retrieve(x => x.Likes); }

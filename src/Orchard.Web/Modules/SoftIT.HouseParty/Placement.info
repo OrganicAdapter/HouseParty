@@ -8,5 +8,7 @@
 
   <Place Parts_HousePartyUser="Content: 2" />
 
-  <Place Parts_FriendRequests="Content: 3" />
+  <Place Parts_Friends="Content: 3" />
+
+  <Place Parts_FriendRequests="Content: 4" />
 </Placement>

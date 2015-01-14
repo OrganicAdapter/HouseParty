@@ -6,6 +6,8 @@
     var contentManager = WorkContext.Resolve<IContentManager>();
 }
 
+<h2>@T("Friend requests")</h2>
+
 @if (WorkContext.CurrentUser.Id.Equals(Model.ContentPart.Id))
 {
     <ul>
@@ -13,6 +15,7 @@
         {
             <li>
                 @(contentManager.Get<IUser>(request.RequestedId).UserName)
+                @Html.ActionLink("Accept", "SetFriendRequestResult", "User", new { Area = "SoftIT.HouseParty", result = 0, requestId = request.Id }, new { })
                 @Html.ActionLink("Deny", "SetFriendRequestResult", "User", new { Area = "SoftIT.HouseParty", result = 1, requestId = request.Id }, new { })
             </li>
         }

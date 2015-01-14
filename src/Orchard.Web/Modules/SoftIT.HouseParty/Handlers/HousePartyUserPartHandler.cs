@@ -17,6 +17,7 @@ namespace SoftIT.HouseParty.Handlers
         public HousePartyUserPartHandler(
             IRepository<HousePartyUserPartRecord> repository, 
             IRepository<FriendRequestRecord> friendRequestRepositoryWork,
+            IRepository<FriendRecord> friendRepositoryWork,
             IContentManager contentManager)
         {
             Filters.Add(StorageFilter.For(repository));
@@ -24,6 +25,7 @@ namespace SoftIT.HouseParty.Handlers
             OnActivated<HousePartyUserPart>((context, part) =>
             {
                 part.FriendRequestsField.Loader(() => friendRequestRepositoryWork.Table.Where(request => request.RequestedId.Equals(part.Id)).ToList());
+                part.FriendsField.Loader(() => friendRepositoryWork.Table.Where(friend => friend.FriendOneId.Equals(part.Id) || friend.FriendTwoId.Equals(part.Id)).ToList());
             });
         }
     }
