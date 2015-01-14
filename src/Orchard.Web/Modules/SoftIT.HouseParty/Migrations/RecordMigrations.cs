@@ -8,7 +8,7 @@ using System.Web;
 
 namespace SoftIT.HouseParty.Migrations
 {
-    public class InvitationMigrations : DataMigrationImpl
+    public class RecordMigrations : DataMigrationImpl
     {
         public int Create()
         {
@@ -19,6 +19,12 @@ namespace SoftIT.HouseParty.Migrations
                     .Column("InvitedId", DbType.Int32)
                     .Column("PartyId", DbType.Int32)
                     .Column("State", DbType.String));
+
+            SchemaBuilder.CreateTable(typeof(FriendRequestRecord).Name,
+                table => table
+                    .Column("Id", DbType.Int32, column => column.PrimaryKey().Identity())
+                    .Column("RequesterId", DbType.Int32)
+                    .Column("RequestedId", DbType.Int32));
 
             return 1;
         }

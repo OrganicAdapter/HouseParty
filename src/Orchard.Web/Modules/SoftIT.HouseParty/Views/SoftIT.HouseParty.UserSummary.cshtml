@@ -1,1 +1,3 @@
 ﻿@Display(Model.DisplayShape())
+
+@Html.ActionLink("Request friendship", "RequestFriendship", new { id = int.Parse(Model.Id.ToString()) })

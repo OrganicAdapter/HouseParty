@@ -7,6 +7,7 @@ using Orchard.Mvc;
 using Orchard.Themes;
 using Orchard.UI.Notify;
 using SoftIT.HouseParty.Constants;
+using SoftIT.HouseParty.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,20 +24,27 @@ namespace SoftIT.HouseParty.Controllers
         private readonly IContentManager _contentManager;
         private readonly ITransactionManager _transactionManager;
         private readonly INotifier _notifier;
+        private readonly IRepository<FriendRequestRecord> _friendRequestRepository;
 
         private Localizer T { get; set; }
 
-        public UserController(IOrchardServices orchardServices, IContentManager contentManager, ITransactionManager transactionManager, INotifier notifier)
+        public UserController(
+            IOrchardServices orchardServices, 
+            IContentManager contentManager, 
+            ITransactionManager transactionManager, 
+            INotifier notifier,
+            IRepository<FriendRequestRecord> friendRequestRepository)
         {
             _orchardServices = orchardServices;
             _contentManager = contentManager;
             _transactionManager = transactionManager;
             _notifier = notifier;
+            _friendRequestRepository = friendRequestRepository;
 
             T = NullLocalizer.Instance;
         }
 
-        public ActionResult UserDashboard(int id = 0)
+        public ActionResult UserDashboard(int id)
         {
             var item = _contentManager.Get(id);
             if (item == null) return new HttpNotFoundResult();
@@ -45,7 +53,7 @@ namespace SoftIT.HouseParty.Controllers
         }
 
         [HttpPost, ActionName("UserDashboard")]
-        public ActionResult UserDashboardPost(int id = 0)
+        public ActionResult UserDashboardPost(int id)
         {
             var item = _contentManager.Get(id);
             if (item == null) return new HttpNotFoundResult();
@@ -70,9 +78,22 @@ namespace SoftIT.HouseParty.Controllers
             if (item == null) return new HttpNotFoundResult();
 
             var itemDisplayShape = _contentManager.BuildDisplay(item);
-            var displayShape = _orchardServices.New.SoftIT_HouseParty_UserSummary(DisplayShape: itemDisplayShape);
+            var displayShape = _orchardServices.New.SoftIT_HouseParty_UserSummary(DisplayShape: itemDisplayShape, Id: id);
 
             return new ShapeResult(this, displayShape);
+        }
+
+        public ActionResult RequestFriendship(int id)
+        {
+            _friendRequestRepository.Create(new FriendRequestRecord
+            {
+                RequestedId = id,
+                RequesterId = _orchardServices.WorkContext.CurrentUser.Id
+            });
+
+            _notifier.Information(T("Your friend request has been sent."));
+            
+            return RedirectToAction("UserSummary", new { id = id });
         }
 
         private ShapeResult UserDashboardShapeResult(ContentItem item)
