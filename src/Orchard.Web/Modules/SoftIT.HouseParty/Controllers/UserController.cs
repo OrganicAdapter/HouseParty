@@ -96,6 +96,24 @@ namespace SoftIT.HouseParty.Controllers
             return RedirectToAction("UserSummary", new { id = id });
         }
 
+        public ActionResult SetFriendRequestResult(int requestId, int result)
+        {
+            var friendRequest = _friendRequestRepository.Table.FirstOrDefault(request => request.Id.Equals(requestId));
+
+            switch (result)
+            { 
+                case 0:
+                    
+                    break;
+
+                case 1:
+                    _friendRequestRepository.Delete(friendRequest);
+                    break;
+            }
+
+            return Redirect(Request.UrlReferrer.ToString());
+        }
+
         private ShapeResult UserDashboardShapeResult(ContentItem item)
         {
             var itemEditorShape = _contentManager.BuildEditor(item);

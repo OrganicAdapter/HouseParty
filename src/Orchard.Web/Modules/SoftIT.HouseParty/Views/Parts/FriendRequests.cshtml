@@ -7,11 +7,14 @@
 }
 
 @if (WorkContext.CurrentUser.Id.Equals(Model.ContentPart.Id))
-{ 
+{
     <ul>
         @foreach (var request in friendRequests)
         {
-            <li>@(contentManager.Get<IUser>(request.RequestedId).UserName)</li>
+            <li>
+                @(contentManager.Get<IUser>(request.RequestedId).UserName)
+                @Html.ActionLink("Deny", "SetFriendRequestResult", "User", new { Area = "SoftIT.HouseParty", result = 1, requestId = request.Id }, new { })
+            </li>
         }
     </ul>
 }
