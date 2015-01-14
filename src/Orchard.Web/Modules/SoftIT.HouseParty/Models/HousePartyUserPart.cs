@@ -11,13 +11,13 @@ namespace SoftIT.HouseParty.Models
 {
     public class HousePartyUserPart : ContentPart<HousePartyUserPartRecord>
     {
-        private readonly LazyField<IEnumerable<FriendRequestRecord>> _friendRequestsField = new LazyField<IEnumerable<FriendRequestRecord>>();
-        internal LazyField<IEnumerable<FriendRequestRecord>> FriendRequestsField { get { return _friendRequestsField; } }
-        public IEnumerable<FriendRequestRecord> FriendRequests { get { return _friendRequestsField.Value; } }
+        private readonly LazyField<IEnumerable<FriendRequestRecord>> _friendRequestsRecordsField = new LazyField<IEnumerable<FriendRequestRecord>>();
+        internal LazyField<IEnumerable<FriendRequestRecord>> FriendRequestsRecordsField { get { return _friendRequestsRecordsField; } }
+        public IEnumerable<FriendRequestRecord> FriendRequestsRecords { get { return _friendRequestsRecordsField.Value; } }
 
-        private readonly LazyField<IEnumerable<FriendRecord>> _friendsField = new LazyField<IEnumerable<FriendRecord>>();
-        internal LazyField<IEnumerable<FriendRecord>> FriendsField { get { return _friendsField; } }
-        public IEnumerable<FriendRecord> Friends { get { return _friendsField.Value; } }
+        private readonly LazyField<IEnumerable<FriendRecord>> _friendsRecordsField = new LazyField<IEnumerable<FriendRecord>>();
+        internal LazyField<IEnumerable<FriendRecord>> FriendsRecordsField { get { return _friendsRecordsField; } }
+        public IEnumerable<FriendRecord> FriendsRecords { get { return _friendsRecordsField.Value; } }
 
         public int Likes
         {

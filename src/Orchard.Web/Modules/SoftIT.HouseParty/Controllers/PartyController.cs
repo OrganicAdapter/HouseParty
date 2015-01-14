@@ -86,28 +86,45 @@ namespace SoftIT.HouseParty.Controllers
 
         public ActionResult InviteUser(int partyId)
         {
-            var invitedFriends = _invitationRepository.Table.Where(invitation => invitation.PartyId.Equals(partyId)).Select(friend => _contentManager.Get(friend.Id)).ToList();
-            var invitedFriendsIds = invitedFriends.Select(friend => friend.Id).ToList();
-            var allFriends = _contentManager.Query("User").ForPart<IUser>().List<IUser>();
-            var friends = allFriends.Where(friend => !invitedFriendsIds.Contains(friend.Id));
+            var currentUserId = _orchardServices.WorkContext.CurrentUser.Id;
+            var friendsIds = _orchardServices.WorkContext.CurrentUser.As<HousePartyUserPart>().FriendsRecords
+                .Select(friendRecord => 
+                    friendRecord.FriendOneId.Equals(currentUserId) ? friendRecord.FriendTwoId : friendRecord.FriendOneId);
+            var invitedUserIds = _invitationRepository.Table
+                .Where(
+                    invite => invite.
+                        PartyId.Equals(partyId))
+                .Select(invite => invite.InvitedId)
+                 .ToList();
+            var friends = friendsIds.Select(friendId => _contentManager.Get<IUser>(friendId)).Where(friend => !invitedUserIds.Contains(friend.Id));
+            var invitedFriends = _contentManager.Query("User").ForPart<IUser>().List<IUser>().Where(user => invitedUserIds.Contains(user.Id));
 
-            var inviteFriendListShape = _orchardServices.New.SoftIT_HouseParty_InviteFriend(Friends: friends, PartyId: partyId);
+            var inviteFriendListShape = _orchardServices.New.SoftIT_HouseParty_InviteFriend(Friends: friends, InvitedFriends: invitedFriends, PartyId: partyId);
 
             return new ShapeResult(this, inviteFriendListShape);
         }
 
-        [HttpPost, ActionName("InviteUser")]
-        public ActionResult InviteUserPost(int partyId, int invitedUserId)
+        public ActionResult SetUserState(int partyId, int userId, int request)
         {
-            _invitationRepository.Create(new InvitationRecord
-                {
-                    InviterId = _orchardServices.WorkContext.CurrentUser.Id,
-                    InvitedId = invitedUserId,
-                    PartyId = partyId,
-                    State = "Pending"
-                });
+            switch(request)
+            {
+                case 0:
+                    _invitationRepository.Create(new InvitationRecord
+                    {
+                        InviterId = _orchardServices.WorkContext.CurrentUser.Id,
+                        InvitedId = userId,
+                        PartyId = partyId,
+                        State = "Pending"
+                    });
+                    break;
 
-            return RedirectToAction("PartySummary", new { id = partyId });
+                case 1:
+                    var invitationRecord = _invitationRepository.Table.FirstOrDefault(invitation => invitation.PartyId.Equals(partyId) && invitation.InvitedId.Equals(userId));
+                    _invitationRepository.Delete(invitationRecord);
+                    break;
+            }
+
+            return RedirectToAction("InviteUser", new { partyId = partyId });
         }
 
         private ShapeResult PartyDashboardShapeResult(ContentItem item)

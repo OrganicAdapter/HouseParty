@@ -1,4 +1,5 @@
-﻿using Orchard.ContentManagement;
+﻿using Orchard;
+using Orchard.ContentManagement;
 using Orchard.ContentManagement.Handlers;
 using Orchard.Data;
 using Orchard.Environment;
@@ -15,7 +16,7 @@ namespace SoftIT.HouseParty.Handlers
     public class HousePartyUserPartHandler : ContentHandler
     {
         public HousePartyUserPartHandler(
-            IRepository<HousePartyUserPartRecord> repository, 
+            IRepository<HousePartyUserPartRecord> repository,
             IRepository<FriendRequestRecord> friendRequestRepositoryWork,
             IRepository<FriendRecord> friendRepositoryWork,
             IContentManager contentManager)
@@ -24,8 +25,15 @@ namespace SoftIT.HouseParty.Handlers
 
             OnActivated<HousePartyUserPart>((context, part) =>
             {
-                part.FriendRequestsField.Loader(() => friendRequestRepositoryWork.Table.Where(request => request.RequestedId.Equals(part.Id)).ToList());
-                part.FriendsField.Loader(() => friendRepositoryWork.Table.Where(friend => friend.FriendOneId.Equals(part.Id) || friend.FriendTwoId.Equals(part.Id)).ToList());
+                part.FriendRequestsRecordsField.Loader(() => friendRequestRepositoryWork.Table.Where(
+                    request => request
+                        .RequestedId.Equals(part.Id))
+                        .ToList());
+
+                part.FriendsRecordsField.Loader(() => friendRepositoryWork.Table.Where(
+                    friend => friend
+                        .FriendOneId.Equals(part.Id) || friend.FriendTwoId.Equals(part.Id))
+                        .ToList());
             });
         }
     }

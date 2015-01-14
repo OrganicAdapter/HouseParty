@@ -4,18 +4,27 @@
 @{
     var partyId = (int)Model.PartyId;
     var friends = (IEnumerable<IUser>)Model.Friends;
+    var invitedFriends = (IEnumerable<IUser>)Model.InvitedFriends;
 }
 
-@using (Html.BeginFormAntiForgeryPost("InviteUser", FormMethod.Post, new { partyId = partyId, invitedUserId = WorkContext.CurrentUser.Id }))
-{
-    <fieldset>
-        <ol>
-            @foreach (var friend in friends)
-            {
-                <li>
-                    <input type="submit" value="@friend.UserName" />
-                </li>
-            }
-        </ol>
-    </fieldset>
-}
+<h2>@T("Invited friends")</h2>
+
+<ul>
+    @foreach (var friend in invitedFriends)
+    {
+        <li>
+            @Html.ActionLink(friend.UserName, "SetUserState", "Party", new { partyId = partyId, userId = WorkContext.CurrentUser.Id, request = 1 }, new { })
+        </li>
+    }
+</ul>
+
+<h2>@T("Friends")</h2>
+
+<ul>
+    @foreach (var friend in friends)
+    {
+        <li>
+            @Html.ActionLink(friend.UserName, "SetUserState", "Party", new { partyId = partyId, userId = WorkContext.CurrentUser.Id, request = 0 }, new { })
+        </li>
+    }
+</ul>

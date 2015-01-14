@@ -3,7 +3,7 @@
 
 @{
     var helperId = 0;
-    var friends = (IEnumerable<SoftIT.HouseParty.Models.FriendRecord>)Model.ContentPart.Friends;
+    var friends = (IEnumerable<SoftIT.HouseParty.Models.FriendRecord>)Model.ContentPart.FriendsRecords;
     var contentManager = WorkContext.Resolve<IContentManager>();
 }
 
@@ -13,7 +13,7 @@
     @foreach (var friend in friends)
     {
         <li>
-            <span hidden="hidden">@(helperId = friend.FriendOneId.Equals(WorkContext.CurrentUser.Id) ? friend.FriendOneId : friend.FriendTwoId)</span>
+            <span hidden="hidden">@(helperId = friend.FriendOneId.Equals(WorkContext.CurrentUser.Id) ? friend.FriendTwoId : friend.FriendOneId)</span>
             @(contentManager.Get<IUser>(helperId).UserName)
         </li>
     }

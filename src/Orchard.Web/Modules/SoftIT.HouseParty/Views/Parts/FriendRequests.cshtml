@@ -2,7 +2,7 @@
 @using Orchard.ContentManagement
 
 @{
-    var friendRequests = (IEnumerable<SoftIT.HouseParty.Models.FriendRequestRecord>)Model.ContentPart.FriendRequests;
+    var friendRequests = (IEnumerable<SoftIT.HouseParty.Models.FriendRequestRecord>)Model.ContentPart.FriendRequestsRecords;
     var contentManager = WorkContext.Resolve<IContentManager>();
 }
 
