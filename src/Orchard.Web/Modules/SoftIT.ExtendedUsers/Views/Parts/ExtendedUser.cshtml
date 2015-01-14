@@ -17,3 +17,8 @@
 <div>@T("Address: {0}", address)</div>
 <div>@T("Phone: {0}", phone)</div>
 <div>@T("Date of birth: {0}", dateOfBirth)</div>
+
+@if (Model.ContentItem.Id.Equals(WorkContext.CurrentUser.Id))
+{
+    <div>@Html.ActionLink("Edit profile", "ExtendedUserDashboard", "ExtendedUser", new { Area = "SoftIT.ExtendedUsers", id = Model.ContentPart.Id }, new { })</div>
+}
