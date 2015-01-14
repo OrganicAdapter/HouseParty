@@ -140,6 +140,9 @@
     <Content Include="Views\SoftIT.HouseParty.UserDashboard.cshtml" />
     <Content Include="Views\SoftIT.HouseParty.UserSummary.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\FriendRequests.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

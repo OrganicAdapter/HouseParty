@@ -1,5 +1,7 @@
 ﻿using Orchard.ContentManagement;
 using Orchard.ContentManagement.Records;
+using Orchard.Core.Common.Utilities;
+using Orchard.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,10 @@ namespace SoftIT.HouseParty.Models
 {
     public class HousePartyUserPart : ContentPart<HousePartyUserPartRecord>
     {
+        private readonly LazyField<IEnumerable<FriendRequestRecord>> _friendRequestsField = new LazyField<IEnumerable<FriendRequestRecord>>();
+        internal LazyField<IEnumerable<FriendRequestRecord>> FriendRequestsField { get { return _friendRequestsField; } }
+        public IEnumerable<FriendRequestRecord> FriendRequests { get { return _friendRequestsField.Value; } }
+
         public int Likes
         {
             get { return Retrieve(x => x.Likes); }

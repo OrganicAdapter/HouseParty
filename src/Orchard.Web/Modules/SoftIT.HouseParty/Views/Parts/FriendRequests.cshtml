@@ -1,0 +1,18 @@
+﻿@using Orchard.Security
+@using Orchard.ContentManagement
+
+@{
+    var friendRequests = (IEnumerable<SoftIT.HouseParty.Models.FriendRequestRecord>)Model.ContentPart.FriendRequests;
+    var contentManager = WorkContext.Resolve<IContentManager>();
+}
+
+@if (WorkContext.CurrentUser.Id.Equals(Model.ContentPart.Id))
+{ 
+    <ul>
+        @foreach (var request in friendRequests)
+        {
+            <li>@(contentManager.Get<IUser>(request.RequestedId).UserName)</li>
+        }
+    </ul>
+}
+
