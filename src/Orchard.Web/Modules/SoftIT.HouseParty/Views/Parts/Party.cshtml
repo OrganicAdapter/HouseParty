@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Orchard.ContentManagement
+@using SoftIT.HouseParty.Models
+
+@{
     var name = (string)Model.ContentPart.Name;
     var publicType = (string)Model.ContentPart.PublicType;
     var foodType = (string)Model.ContentPart.FoodType;
@@ -14,6 +17,8 @@
     var visibility = (bool)Model.ContentPart.Visibility;
     var category = (string)Model.ContentPart.Category;
     var currency = (string)Model.ContentPart.Currency;
+    var supplies = (IEnumerable<SupplyPart>)Model.ContentPart.Supplies;
+    var participantsCount = (int)Model.ContentPart.ParticipantInvitationsRecords.Count;
 }
 
 <h1>@name</h1>
@@ -26,7 +31,7 @@
 <div>@T("City: {0}", city)</div>
 <div>@T("Address: {0}", address)</div>
 <div>@T("Policy: {0}", policy)</div>
-<div>@T("Limit: {0}", limit)</div>
+<div>@T("Limit: {0} / {1}", participantsCount, limit)</div>
 <div>@T("Public: {0}", visibility)</div>
 <div>@T("Category: {0}", category)</div>
 
@@ -34,3 +39,12 @@
 { 
     <div>@Html.ActionLink("Edit party", "PartyDashboard", "Party", new { Area = "SoftIT.HouseParty", id = Model.ContentPart.Id }, new { })</div>
 }
+
+<h2>@T("Supplies")</h2>
+
+<ul>
+    @foreach (var supply in supplies)
+    {   
+        <li>@Display(supply)</li>
+    }
+</ul>

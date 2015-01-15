@@ -38,7 +38,9 @@ namespace SoftIT.HouseParty.Drivers
 
         protected override DriverResult Display(PartyPart part, string displayType, dynamic shapeHelper)
         {
-            return ContentShape("Parts_Party", () => shapeHelper.Parts_Party());
+            return Combined(
+                ContentShape("Parts_Participants", () => shapeHelper.Parts_Participants()),
+                ContentShape("Parts_Party", () => shapeHelper.Parts_Party()));
         }
 
         protected override DriverResult Editor(PartyPart part, dynamic shapeHelper)

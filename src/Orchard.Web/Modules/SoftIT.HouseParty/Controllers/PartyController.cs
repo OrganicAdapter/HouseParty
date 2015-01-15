@@ -29,6 +29,7 @@ namespace SoftIT.HouseParty.Controllers
 
         private Localizer T { get; set; }
 
+
         public PartyController(IOrchardServices orchardServices, IContentManager contentManager, ITransactionManager transactionManager, INotifier notifier, IRepository<InvitationRecord> invitationRepository)
         {
             _orchardServices = orchardServices;
@@ -39,6 +40,7 @@ namespace SoftIT.HouseParty.Controllers
 
             T = NullLocalizer.Instance;
         }
+
 
         public ActionResult PartyDashboard(int id = 0)
         {
@@ -122,10 +124,16 @@ namespace SoftIT.HouseParty.Controllers
                     var invitationRecord = _invitationRepository.Table.FirstOrDefault(invitation => invitation.PartyId.Equals(partyId) && invitation.InvitedId.Equals(userId));
                     _invitationRepository.Delete(invitationRecord);
                     break;
+
+                case 2:
+                    invitationRecord = _invitationRepository.Table.FirstOrDefault(invitation => invitation.PartyId.Equals(partyId) && invitation.InvitedId.Equals(userId));
+                    invitationRecord.State = "Accepted";
+                    break;
             }
 
-            return RedirectToAction("InviteUser", new { partyId = partyId });
+            return Redirect(Request.UrlReferrer.ToString());
         }
+
 
         private ShapeResult PartyDashboardShapeResult(ContentItem item)
         {
@@ -139,6 +147,7 @@ namespace SoftIT.HouseParty.Controllers
         {
             return id.Equals(0) ? _contentManager.New(ContentTypes.Party) : _contentManager.Get(id);
         }
+
 
         bool IUpdateModel.TryUpdateModel<TModel>(TModel model, string prefix, string[] includeProperties, string[] excludeProperties)
         {

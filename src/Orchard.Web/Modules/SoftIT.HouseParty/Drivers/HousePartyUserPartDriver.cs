@@ -20,6 +20,8 @@ namespace SoftIT.HouseParty.Drivers
         protected override DriverResult Display(HousePartyUserPart part, string displayType, dynamic shapeHelper)
         {
             return Combined(
+                ContentShape("Parts_Parties", () => shapeHelper.Parts_Parties()),
+                ContentShape("Parts_Invitations", () => shapeHelper.Parts_Invitations()),
                 ContentShape("Parts_Friends", () => shapeHelper.Parts_Friends()),
                 ContentShape("Parts_FriendRequests", () => shapeHelper.Parts_FriendRequests()),
                 ContentShape("Parts_HousePartyUser", () => shapeHelper.Parts_HousePartyUser()));

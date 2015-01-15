@@ -1,0 +1,18 @@
+﻿@using SoftIT.HouseParty.Models
+@using Orchard.ContentManagement
+@using Orchard.Security
+
+@{
+    var participantInvitations = (IEnumerable<InvitationRecord>)Model.ContentPart.ParticipantInvitationsRecords;
+    var contentManager = WorkContext.Resolve<IContentManager>();
+}
+
+<h2>@T("Participants")</h2>
+
+<ul>
+    @foreach (var participant in participantInvitations)
+    {
+        <li>@Html.ActionLink(contentManager.Get<IUser>(participant.InvitedId).UserName, "UserSummary", "User", new { Area = "SoftIT.HouseParty", id = participant.InvitedId }, new { })</li>
+    }
+</ul>
+

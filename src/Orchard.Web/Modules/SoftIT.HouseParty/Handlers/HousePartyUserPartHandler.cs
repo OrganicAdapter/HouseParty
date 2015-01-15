@@ -1,6 +1,7 @@
 ﻿using Orchard;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Handlers;
+using Orchard.Core.Common.Models;
 using Orchard.Data;
 using Orchard.Environment;
 using Orchard.Security;
@@ -19,7 +20,8 @@ namespace SoftIT.HouseParty.Handlers
             IRepository<HousePartyUserPartRecord> repository,
             IRepository<FriendRequestRecord> friendRequestRepositoryWork,
             IRepository<FriendRecord> friendRepositoryWork,
-            IContentManager contentManager)
+            IRepository<InvitationRecord> invitationsRepositoryWork,
+            Work<IContentManager> contentManagerWork)
         {
             Filters.Add(StorageFilter.For(repository));
 
@@ -34,6 +36,25 @@ namespace SoftIT.HouseParty.Handlers
                     friend => friend
                         .FriendOneId.Equals(part.Id) || friend.FriendTwoId.Equals(part.Id))
                         .ToList());
+
+                part.InvitationsRecordsField.Loader(() => invitationsRepositoryWork.Table.Where(
+                    invitation => 
+                        invitation.InvitedId.Equals(part.Id) && 
+                        invitation.State.Equals("Pending"))
+                        .ToList());
+
+                part.PartiesField.Loader(() => contentManagerWork.Value.Query(ContentTypes.Party)
+                    .List()
+                    .Where(
+                        party => party
+                            .As<CommonPart>()
+                            .Owner.Id.Equals(part.Id))
+                    .AsPart<PartyPart>());
+
+                part.PartiesInvitedField.Loader(() => invitationsRepositoryWork.Table.Where(
+                    invitation => 
+                        invitation.InvitedId.Equals(part.Id) &&
+                        invitation.State.Equals("Accepted")));
             });
         }
     }

@@ -1,0 +1,26 @@
+﻿@using SoftIT.HouseParty.Models
+@using Orchard.ContentManagement
+
+@{
+    var parties = (IEnumerable<PartyPart>)Model.ContentPart.Parties;
+    var partieInvited = (IEnumerable<InvitationRecord>)Model.ContentPart.PartiesInvited;
+    var contentManager = WorkContext.Resolve<IContentManager>();
+}
+
+<h2>@T("Parties you organize")</h2>
+
+<ul>
+    @foreach (var party in parties)
+    {   
+        <li>@Html.ActionLink(party.Name, "PartySummary", "Party", new { Area = "SoftIT.HouseParty", id = party.Id }, new { })</li>
+    }
+</ul>
+
+<h2>@T("Parties you participate")</h2>
+
+<ul>
+    @foreach (var party in partieInvited)
+    {
+        <li>@Html.ActionLink(contentManager.Get<PartyPart>(party.PartyId).Name, "PartySummary", "Party", new { Area = "SoftIT.HouseParty", id = contentManager.Get<PartyPart>(party.PartyId).Id }, new { })</li>
+    }
+</ul>

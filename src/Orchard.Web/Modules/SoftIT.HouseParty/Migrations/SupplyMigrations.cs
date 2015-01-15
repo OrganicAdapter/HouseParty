@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using Orchard.ContentManagement.MetaData;
+using SoftIT.HouseParty.Constants;
 
 namespace SoftIT.HouseParty.Migrations
 {
@@ -25,7 +27,22 @@ namespace SoftIT.HouseParty.Migrations
                     .Column("PersonPerUnit", DbType.Int32)
                     .Column("PartyId", DbType.Int32));
 
-            return 1;
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Supply,
+                type => type
+                    .WithPart("CommonPart")
+                    .WithPart(typeof(SupplyPart).Name));
+
+            return 2;
+        }
+
+        public int UpdateFrom1()
+        {
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Supply,
+                type => type
+                    .WithPart("CommonPart")
+                    .WithPart(typeof(SupplyPart).Name));
+
+            return 2;
         }
     }
 }

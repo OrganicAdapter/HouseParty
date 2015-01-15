@@ -19,6 +19,18 @@ namespace SoftIT.HouseParty.Models
         internal LazyField<IEnumerable<FriendRecord>> FriendsRecordsField { get { return _friendsRecordsField; } }
         public IEnumerable<FriendRecord> FriendsRecords { get { return _friendsRecordsField.Value; } }
 
+        private readonly LazyField<IEnumerable<InvitationRecord>> _invitationsRecordsField = new LazyField<IEnumerable<InvitationRecord>>();
+        internal LazyField<IEnumerable<InvitationRecord>> InvitationsRecordsField { get { return _invitationsRecordsField; } }
+        public IEnumerable<InvitationRecord> InvitationsRecords { get { return _invitationsRecordsField.Value; } }
+
+        private readonly LazyField<IEnumerable<PartyPart>> _partiesField = new LazyField<IEnumerable<PartyPart>>();
+        internal LazyField<IEnumerable<PartyPart>> PartiesField { get { return _partiesField; } }
+        public IEnumerable<PartyPart> Parties { get { return _partiesField.Value; } }
+
+        private readonly LazyField<IEnumerable<InvitationRecord>> _partiesInvitedField = new LazyField<IEnumerable<InvitationRecord>>();
+        internal LazyField<IEnumerable<InvitationRecord>> PartiesInvitedField { get { return _partiesInvitedField; } }
+        public IEnumerable<InvitationRecord> PartiesInvited { get { return _partiesInvitedField.Value; } }
+
         public int Likes
         {
             get { return Retrieve(x => x.Likes); }

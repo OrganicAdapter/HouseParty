@@ -3,7 +3,9 @@
          Parts_Party="Content: 1"/>
 
   <Place Parts_Supply_Edit="Content: 1"
-         Parts_Supply="Content: 2" />
+         Parts_Supply="AsideFirst: 2" />
+
+  <Place Parts_Participants="Content: 2" />
 
   <Place Parts_NewPartyWidget="Content: 1" />
 
@@ -14,4 +16,8 @@
   <Place Parts_Friends="Content: 3" />
 
   <Place Parts_FriendRequests="Content: 4" />
+
+  <Place Parts_Invitations="Content: 5" />
+  
+  <Place Parts_Parties="Content: 6" />
 </Placement>
