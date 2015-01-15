@@ -2,6 +2,9 @@
 	<Place Parts_Party_Edit="Content: 1"
          Parts_Party="Content: 1"/>
 
+  <Place Parts_Supply_Edit="Content: 1"
+         Parts_Supply="Content: 2" />
+
   <Place Parts_NewPartyWidget="Content: 1" />
 
   <Place Parts_UserSearchWidget="Content: 1" />

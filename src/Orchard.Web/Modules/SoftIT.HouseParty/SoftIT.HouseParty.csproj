@@ -98,13 +98,16 @@
     <Compile Include="Drivers\HousePartyUserPartDriver.cs" />
     <Compile Include="Drivers\NewPartyWidgetPartDriver.cs" />
     <Compile Include="Drivers\PartyPartDriver.cs" />
+    <Compile Include="Drivers\SupplyPartDriver.cs" />
     <Compile Include="Drivers\UserSearchWidgetPartDriver.cs" />
+    <Compile Include="Handlers\SupplyPartHandler.cs" />
     <Compile Include="Handlers\UserSearchWidgetPartHandler.cs" />
     <Compile Include="Handlers\HousePartyUserPartHandler.cs" />
     <Compile Include="Handlers\PartyPartHandler.cs" />
     <Compile Include="Migrations\HousePartyUserMigrations.cs" />
     <Compile Include="Migrations\RecordMigrations.cs" />
     <Compile Include="Migrations\PartyMigrations.cs" />
+    <Compile Include="Migrations\SupplyMigrations.cs" />
     <Compile Include="Migrations\WidgetsMigrations.cs" />
     <Compile Include="Models\FriendRequestRecord.cs" />
     <Compile Include="Models\FriendRecord.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Models\InvitationRecord.cs" />
     <Compile Include="Models\NewPartyWidgetPart.cs" />
     <Compile Include="Models\PartyPart.cs" />
+    <Compile Include="Models\SupplyPart.cs" />
     <Compile Include="Models\UserSearchWidgetPart.cs" />
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Services\HousePartyUserMoneyService.cs" />
@@ -146,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\Friends.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Supply.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditorTemplates\Parts\Supply.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

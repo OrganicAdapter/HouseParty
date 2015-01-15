@@ -1,0 +1,29 @@
+﻿@model SoftIT.HouseParty.Models.SupplyPart
+
+<fieldset>
+    <legend>@T("Supply properties")</legend>
+
+    <ol>
+        <li>
+            @Html.LabelFor(model => model.Name, T("Name *"))
+            @Html.EditorFor(model => model.Name)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Price, T("Price *"))
+            @Html.EditorFor(model => model.Price)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Quantity, T("Quantity *"))
+            @Html.EditorFor(model => model.Quantity)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.Unit, T("Unit *"))
+            @Html.EditorFor(model => model.Unit)
+        </li>
+        <li>
+            @Html.LabelFor(model => model.PersonPerUnit, T("Person/unit"))
+            @Html.EditorFor(model => model.PersonPerUnit)
+            <span class="hint">@T("What do you think? How many party faces can mop up this supply?")</span>
+        </li>
+    </ol>
+</fieldset>

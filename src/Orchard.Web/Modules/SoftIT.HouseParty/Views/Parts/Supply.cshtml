@@ -1,0 +1,25 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Security
+@using SoftIT.HouseParty.Models
+
+@{
+    var name = (string)Model.ContentPart.Name;
+    var price = (decimal)Model.ContentPart.Price;
+    var likes = (int)Model.ContentPart.Likes;
+    var dislikes = (int)Model.ContentPart.Dislikes;
+    var quantity = (decimal)Model.ContentPart.Quantity;
+    var unit = (string)Model.ContentPart.Unit;
+    var personPerUnit = (int)Model.ContentPart.PersonPerUnit;
+    var party = Model.ContentPart.Party.As<PartyPart>();
+    var assignedTo = (IUser)Model.ContentPart.AssignedTo;
+}
+
+<div>@T("Name: {0}", name)</div>
+<div>@T("Price: {0}", price)</div>
+<div>@T("Likes: {0}", likes)</div>
+<div>@T("Dislikes: {0}", dislikes)</div>
+<div>@T("Quantity: {0}", quantity)</div>
+<div>@T("Unit: {0}", unit)</div>
+<div>@T("Person/Unit: {0}", personPerUnit)</div>
+<div>@T("Party: {0}", party.Name)</div>
+<div>@T("AssignedTo: {0}", assignedTo.UserName)</div>
