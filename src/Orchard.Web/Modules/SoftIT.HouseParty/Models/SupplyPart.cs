@@ -18,9 +18,9 @@ namespace SoftIT.HouseParty.Models
         internal LazyField<IUser> AssignedToField { get { return _assignedToField; } }
         public IUser AssignedTo { get { return _assignedToField.Value; } }
 
-        private readonly LazyField<ContentItem> _partyField = new LazyField<ContentItem>();
-        internal LazyField<ContentItem> PartyField { get { return _partyField; } }
-        public ContentItem Party { get { return _partyField.Value; } }
+        private readonly LazyField<PartyPart> _partyField = new LazyField<PartyPart>();
+        internal LazyField<PartyPart> PartyField { get { return _partyField; } }
+        public PartyPart Party { get { return _partyField.Value; } }
 
         [Required]
         public string Name

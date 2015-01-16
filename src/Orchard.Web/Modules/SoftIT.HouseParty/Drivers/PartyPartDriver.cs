@@ -40,6 +40,7 @@ namespace SoftIT.HouseParty.Drivers
         {
             return Combined(
                 ContentShape("Parts_Participants", () => shapeHelper.Parts_Participants()),
+                ContentShape("Parts_Supplies", () => shapeHelper.Parts_Supplies()),
                 ContentShape("Parts_Party", () => shapeHelper.Parts_Party()));
         }
 

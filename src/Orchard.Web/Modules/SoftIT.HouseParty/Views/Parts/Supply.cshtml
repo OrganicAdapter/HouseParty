@@ -10,7 +10,7 @@
     var quantity = (decimal)Model.ContentPart.Quantity;
     var unit = (string)Model.ContentPart.Unit;
     var personPerUnit = (int)Model.ContentPart.PersonPerUnit;
-    var party = Model.ContentPart.Party.As<PartyPart>();
+    var party = Model.ContentPart.Party;
     var assignedTo = (IUser)Model.ContentPart.AssignedTo;
 }
 
@@ -22,4 +22,12 @@
 <div>@T("Unit: {0}", unit)</div>
 <div>@T("Person/Unit: {0}", personPerUnit)</div>
 <div>@T("Party: {0}", party.Name)</div>
-<div>@T("AssignedTo: {0}", assignedTo.UserName)</div>
+
+@if (assignedTo != null)
+{ 
+    <div>@T("Assigned to {0}", assignedTo.UserName)</div>
+}
+else
+{
+    <div>@T("Unassigned")</div>
+}

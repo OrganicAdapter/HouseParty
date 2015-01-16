@@ -19,7 +19,7 @@ namespace SoftIT.HouseParty.Handlers
 
             OnActivated<SupplyPart>((context, part) =>
                 {
-                    part.PartyField.Loader(() => contentManagerWork.Value.Get(part.PartyId));
+                    part.PartyField.Loader(() => contentManagerWork.Value.Get(part.PartyId).As<PartyPart>());
                     part.AssignedToField.Loader(() => contentManagerWork.Value.Get(part.AssignedToId).As<IUser>());
                 });
         }

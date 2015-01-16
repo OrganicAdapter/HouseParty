@@ -3,9 +3,11 @@
          Parts_Party="Content: 1"/>
 
   <Place Parts_Supply_Edit="Content: 1"
-         Parts_Supply="AsideFirst: 2" />
+         Parts_Supply="Content: 1" />
 
   <Place Parts_Participants="Content: 2" />
+
+  <Place Parts_Supplies="Content: 3" />
 
   <Place Parts_NewPartyWidget="Content: 1" />
 

@@ -4,6 +4,8 @@
     <legend>@T("Supply properties")</legend>
 
     <ol>
+        @Html.HiddenFor(model => model.PartyId)
+        @Html.HiddenFor(model => model.AssignedToId)
         <li>
             @Html.LabelFor(model => model.Name, T("Name *"))
             @Html.EditorFor(model => model.Name)

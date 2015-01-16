@@ -69,6 +69,24 @@ namespace SoftIT.HouseParty.Controllers
                 return PartyDashboardShapeResult(item);
             }
 
+            var partyPart = item.As<PartyPart>();
+
+            if (!partyPart.FoodType.Equals("Self-service"))
+            {
+                foreach (var supply in partyPart.Supplies)
+                {
+                    supply.AssignedToId = partyPart.As<CommonPart>().Owner.Id;
+                }
+            }
+            else
+            {
+                foreach (var supply in partyPart.Supplies)
+                {
+                    if (supply.AssignedToId.Equals(partyPart.As<CommonPart>().Owner.Id))
+                        supply.AssignedToId = 0;
+                }
+            }
+
             _contentManager.Publish(item);
             _notifier.Information(T("The party was successfully saved."));
 

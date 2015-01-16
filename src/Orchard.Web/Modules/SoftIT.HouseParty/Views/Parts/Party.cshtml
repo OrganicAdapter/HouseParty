@@ -17,7 +17,6 @@
     var visibility = (bool)Model.ContentPart.Visibility;
     var category = (string)Model.ContentPart.Category;
     var currency = (string)Model.ContentPart.Currency;
-    var supplies = (IEnumerable<SupplyPart>)Model.ContentPart.Supplies;
     var participantsCount = (int)Model.ContentPart.ParticipantInvitationsRecords.Count;
 }
 
@@ -39,12 +38,3 @@
 { 
     <div>@Html.ActionLink("Edit party", "PartyDashboard", "Party", new { Area = "SoftIT.HouseParty", id = Model.ContentPart.Id }, new { })</div>
 }
-
-<h2>@T("Supplies")</h2>
-
-<ul>
-    @foreach (var supply in supplies)
-    {   
-        <li>@Display(supply)</li>
-    }
-</ul>

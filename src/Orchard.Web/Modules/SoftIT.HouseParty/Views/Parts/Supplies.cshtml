@@ -1,0 +1,16 @@
+﻿@using SoftIT.HouseParty.Models
+
+@{
+    var supplies = (IEnumerable<SupplyPart>)Model.ContentPart.Supplies;
+}
+
+<h2>@T("Supplies")</h2>
+
+<ul>
+    @foreach (var supply in supplies)
+    {
+        <li>@Display(BuildDisplay(supply))</li>
+    }
+</ul>
+
+@Html.ActionLink("New supply", "SupplyDashboard", "Supply", new { Area = "SoftIT.HouseParty", id = 0, partyId = Model.ContentPart.Id }, new { })

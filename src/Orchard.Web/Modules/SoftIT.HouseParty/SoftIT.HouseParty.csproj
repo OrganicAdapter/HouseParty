@@ -94,6 +94,7 @@
     <Compile Include="Constants\PartyConstants.cs" />
     <Compile Include="Constants\ServicePrices.cs" />
     <Compile Include="Controllers\PartyController.cs" />
+    <Compile Include="Controllers\SupplyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Drivers\HousePartyUserPartDriver.cs" />
     <Compile Include="Drivers\NewPartyWidgetPartDriver.cs" />
@@ -159,6 +160,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts\Invitations.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Parties.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Participants.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\Supplies.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SoftIT.HouseParty.SupplyDashboard.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
